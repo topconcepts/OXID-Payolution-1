@@ -1,0 +1,251 @@
+.payoliution-flow-error-container {
+    padding: 0!important;
+}
+
+.payoliution-flow-error-symbol {
+    position: relative;
+    background-color: #E84C3D;
+}
+
+.payoliution-flow-error-symbol span {
+    color: white;
+    font-weight: 900;
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.payoliution-flow-error-text {
+    background-color: #FAECEB;
+    color: #E84C3D;
+    padding: 10px;
+}
+
+
+.payolutionUserDetails.form label {
+    line-height: inherit;
+}
+
+
+#payo-panel-bankInfo li,
+.payolution_usertext_payolution_invoice_b2b li,
+.payolution_usertext_payolution_invoice_b2c li,
+.payolution_usertext_payolution_installment li,
+.payolution_usertext_payolution_dd li {
+    width: inherit!important;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+    position: absolute; top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ui-widget-overlay {
+    background: #000;
+    opacity: .50;
+    filter:Alpha(Opacity=50);
+}
+
+#payoInstallmentModal h2, .h2 {
+    font-size: 29px;
+}
+
+#payo-installment-data th {
+    width: 180px;
+}
+
+#installment-slider.ui-slider-float .ui-slider-tip {
+    padding: 3px 8px;
+}
+
+#installment-slider.ui-slider-float .ui-slider-tip, .ui-slider-float .ui-slider-tip-label {
+    height: initial;
+}
+
+#payo-installment-details {
+    height: 44px;
+}
+
+.closePop {
+    right: 1.5em !important;
+    top: 1.5em !important;
+}
+
+#payo-installment-details-toggler {
+    color: #009ec0;
+}
+
+.detailsInfo .payoReadMore.readMore {
+    font-size: 13px;
+    color: #009ec0;
+}
+.listDetails .payoReadMore.readMore {
+    color: #009ec0;
+    font-size: 11px;
+}
+
+#payo-installment-tabs > li {
+    width: 33%;
+}
+
+.payo-tab-personalInfo-large {
+    width: 50% !important;
+}
+
+.payo-installment-panel h3, .h3 {
+    font-size: 20px;
+}
+
+#payo-button-toInstallmentPeriod {
+    margin-top: 25px;
+}
+
+.payolution-flow-error-container .payolution-flow-error {
+    padding: 10px;
+}
+
+.payolution-flow-error-container {
+    margin-top: 20px;
+}
+
+#payo-panel-installmentPeriod .payolution-select-payment-element {
+    width: 100%;
+    float: none;
+}
+
+.payolutionUserDetails.form label {
+    line-height: 16px;
+}
+
+.js-oxPayolutionError_agree.alert.alert-danger {
+    padding: 5px;
+}
+
+#payo-installment-tabs .num {
+    padding-top: 2px;
+}
+
+.payo-installment-wrapper-right {
+    width: 255px;
+}
+
+#payo-panel-bankInfo .payolutionUserDetails.form label {
+    display: block;
+}
+
+#payo-panel-bankInfo .form-control.js-oxPayolutionValidate.field-iban {
+    display: inline;
+}
+
+#payo-panel-bankInfo div .payo-help {
+    display: inline;
+    float: none;
+}
+
+#payo-panel-bankInfo .form-control {
+    width: 40%;
+}
+#payo-panel-bankInfo .payo-help-text {
+}
+
+.alert.alert-danger {
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.payolution_usertext_payolution_invoice_b2c .payo-help-text,
+.payolution_usertext_payolution_dd .payo-help-text,
+.payolution_usertext_payolution_invoice_b2b .payo-help-text,
+.payolution_usertext_payolution_installment .payo-help-text
+{
+    float: left;
+    margin-bottom: 5px;
+}
+
+.form-control.payolution-form-birthday-input {
+    float: inherit;
+}
+
+.payo-installment-wrapper-flow {
+    overflow: hidden;
+    position: relative;
+}
+
+.payo-loader-flow {
+    width: 100% !important;
+    height: 100% !important;
+    right: 0;
+    top: 0;
+}
+
+@media (max-width: 500px) {
+    .ui-dialog.ui-widget.ui-widget-content {
+        width: auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #payo-installment-wrapper {
+        width: 100%;
+    }
+
+    .payoliution-flow-form-container {
+        margin-left: 0;
+    }
+
+    .payolution_installment > dd > div {
+        display: block !important;
+    }
+
+    .payolution_usertext_payolution_invoice_b2c .payo-help,
+    .payolution_usertext_payolution_dd .payo-help,
+    .payolution_usertext_payolution_invoice_b2b .payo-help,
+    .payolution_usertext_payolution_installment .payo-help,
+    #payo-panel-bankInfo input.payo-help
+    {
+        display: none;
+    }
+
+    #payo-installment-wrapper #payo-panel-bankInfo .form-control {
+        width: 80%;
+    }
+
+    .form-control.payolution-form-birthday-input {
+        width: 100%;
+    }
+
+}
+
+#payo-loader, .payo-loader {
+    background-color: #f5f5f5 ;
+}
+
+@media (max-width: 580px) {
+    .payo-installment-wrapper-right {
+        float: left;
+    }
+}
+
+@media (max-width: 420px) {
+    .payoLongCheckText {
+        width: 91.66666667% !important;
+    }
+}
+
+#payo-panel-bankInfo ul{
+    margin-top: 40px;
+}
+
+.payo-error-container {
+    margin-bottom: 10px;
+}
+
+.flow-error {
+    margin-bottom: 20px;
+}

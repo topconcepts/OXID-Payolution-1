@@ -1,0 +1,22 @@
+{
+  "name": "tc/payolution",
+  "description": "Payolution OXID module",
+  "type": "oxideshop-module",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=5.6"
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "tc/payolution"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Payolution\\Module\\": "../../../source/modules/tc/payolution",
+      "Payolution\\": "../../../source/modules/tc/payolution/src"
+    }
+  }
+}

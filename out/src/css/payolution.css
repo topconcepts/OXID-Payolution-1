@@ -1,0 +1,732 @@
+.summary .payolutionPartBlock {
+    font-size: 11px;
+    padding-top: 10px;
+}
+
+.summary .payolutionPartBlock img {
+    margin-right: 30px;
+}
+
+.payolutionMoreInfo {
+    text-decoration: underline;
+    color: #14a0d9;
+}
+
+.payolutionMoreInfo:hover {
+    text-decoration: none;
+}
+
+.articleTitle .payolutionMoreInfo {
+    color: #000;
+}
+
+.articleTitle .payolutionMoreInfo .oldPrice {
+    color: #000;
+    font-size: 9px;
+}
+
+.infogridView .listDetails {
+    height: 168px !important;
+}
+
+.infogridView .priceBox {
+    height: 62px !important;
+}
+
+.gridView .oldPrice {
+    font-size: 11px;
+}
+
+.payolutionPreorderArticles {
+    margin: 10px 15px;
+}
+
+.payolutionPreorderArticles li {
+    list-style-type: square;
+}
+
+.oxPayolutionPaymentDetails {
+    position: relative;
+}
+
+.oxPayolutionPaymentPayolutionReadMore, .oxPayolutionPaymentPayolutionPrivacy {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #3FC7F3;
+    text-decoration: none;
+}
+
+.oxPayolutionPaymentChangeAddr {
+    color: #3FC7F3;
+    text-decoration: none;
+}
+
+.oxPayolutionPaymentPayolutionReadMore:hover, .oxPayolutionPaymentPayolutionPrivacy:hover, .oxPayolutionPaymentChangeAddr:hover {
+    text-decoration: underline;
+}
+
+.payolutionUserDetails.form .note {
+    padding-left: 0;
+    padding-top: 0;
+    color: #000000;
+}
+
+.payolutionUserDetails.form li {
+    padding: 0;
+}
+
+.payolutionUserDetails.form li.add-padd {
+    padding-bottom: 6px;
+}
+
+.payolutionUserDetails.form label {
+    line-height: 11px;
+}
+
+.payolutionDetailsBlock {
+    font-size: 11px;
+    margin-top: 5px;
+    display: block;
+}
+
+.payolutionDetailsLogo {
+    margin-left: 20px;
+}
+
+.payolutionHidden {
+    position: absolute;
+    left: -100000px;
+    top: -100000px;
+}
+
+.oxPayolutionPayment .form input[data-fieldsize="verify"] {
+    width: 103px;
+}
+
+.oxPayolutionPayment .form input[data-fieldsize="xsmall"] {
+    width: 25px;
+}
+
+.oxPayolutionPayment .form input[data-fieldsize="small"] {
+    width: 52px;
+}
+
+.oxPayolutionPayment .form input[data-fieldsize="pair-small"] {
+    width: 121px;
+}
+
+.oxPayolutionPayment .form input[data-fieldsize="xsmall"] + input[data-fieldsize="pair-xsmall"], .oxPayolutionPayment .form input[data-fieldsize="xsmall"] + css3-container + input[data-fieldsize="pair-xsmall"], .oxPayolutionPayment .form input[data-fieldsize="pair-xsmall"] + input[data-fieldsize="xsmall"], .oxPayolutionPayment .form input[data-fieldsize="pair-xsmall"] + css3-container + input[data-fieldsize="xsmall"], .oxPayolutionPayment .form input[data-fieldsize="small"] + input[data-fieldsize="pair-small"], .oxPayolutionPayment .form input[data-fieldsize="small"] + css3-container + input[data-fieldsize="pair-small"], .oxPayolutionPayment .form input[data-fieldsize="small"] + input[data-fieldsize="small"], .oxPayolutionPayment .form input[data-fieldsize="small"] + css3-container + input[data-fieldsize="small"], .oxPayolutionPayment .form input[data-fieldsize="medium"] + input[data-fieldsize="medium"], .oxPayolutionPayment .form input[data-fieldsize="medium"] + css3-container + input[data-fieldsize="medium"] {
+    margin-left: 5px;
+}
+
+.oxPayolutionCreditWarningBlock {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.payolution-tooltip.data ul {
+    background: none;
+    border: none;
+}
+
+#payolution_mini_basket {
+    margin-top: 10px;
+    display: block;
+}
+
+/** TABS **/
+.payolution-tabs {
+    border-bottom: 1px solid #BEBEBE;
+    display: block;
+    width: 100%;
+}
+
+.payolution-tabs ul, .payolution-tabs ul li {
+    list-style: none;
+}
+
+.payolution-tabs ul {
+    margin-left: 20px;
+    top: 1px;
+    position: relative;
+
+}
+
+.payolution-tabs ul li {
+    float: left;
+    position: relative;
+    margin-left: -20px;
+    display: inline;
+    padding: 0px;
+}
+
+.payolution-tabs ul li a {
+    position: relative;
+    width: 400px;
+    height: 31px;
+    display: block;
+    background-image: url('../../img/payolution-express.png');
+    background-position: center center;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 9px;
+    text-align: left;
+    padding-left: 30px;
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 10px;
+    color: #979797;
+}
+
+.payolution-tabs ul li img {
+    max-height: 30px;
+}
+
+.payolution-tabs ul li.active a {
+    z-index: 100;
+    background-image: url('../../img/payolution-active.png');
+}
+
+/** login box **/
+.payolution-checkout-login {
+    padding-top: 35px;
+    padding-left: 13px;
+    margin-bottom: 30px;
+    width: 587px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #DDD;
+}
+
+.payolution-checkout-login .existing-user {
+    color: #31393E;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+
+.payolution-checkout-login .payolution-small-text {
+    font-size: 12px;
+    font-weight: normal;
+    color: #979797;
+}
+
+.payolution-content input[type="text"],
+.payolution-content input[type="password"],
+.payolution-content input[type="submit"] {
+    padding: 10px 10px 8px;
+    width: 230px;
+    outline: medium none;
+    border: 1px solid #BBB;
+    height: 21px;
+    border-radius: 2px;
+    background: #F6F6F6;
+    color: #555;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.payolution-content .payolution-dropdown {
+    width: 252px;
+    outline: medium none;
+    border: 1px solid #BBB;
+    height: 35px;
+    border-radius: 2px;
+    background: #F6F6F6;
+    padding: 7px 10px 7px;
+    color: #555;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.payolution-content input[type="submit"] {
+    height: 41px;
+    width: 50px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #36A2EA;
+    color: #FFF;
+    margin-left: -5px;
+}
+
+.payolution-content .payolution-customer .title {
+    color: #31393E;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.payolution-submit-button {
+    cursor: pointer;
+}
+
+.payolution-submit-button.nextStep {
+    background: transparent;
+}
+
+.payolution-content .payolution-shipping {
+    width: 255px;
+    float: left;
+}
+
+.payolution-content .payolution-frame {
+    width: 600px;
+}
+
+.payolution-content .payolution-customer {
+    padding-bottom: 30px;
+    padding-left: 13px;
+}
+
+.payolution-content #tsBox {
+    padding-left: 13px;
+}
+
+.payolution-content #tsBox h3.blockHead {
+    margin-top: 0;
+    color: #434343;
+    font-size: 15px;
+}
+
+.payolution-content .blockHead {
+    font-size: 13px;
+    color: #979797;
+}
+
+.payolution-content .payolution-input-user {
+    margin-right: 20px;
+}
+
+.payolution-content .payolution-delivery {
+    width: 275px;
+    float: left;
+}
+
+.payolution-express-button {
+    padding: 0 10px 1px 10px !important;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.payolution-express-button.disabled {
+    background: #CCC;
+    text-shadow: none;
+}
+
+.payolution-express-button.button-with-image.disabled {
+    background: transparent;
+}
+
+.payolution-express-button.disabled:hover {
+    background: #CCC;
+    text-shadow: none;
+}
+
+.payolution-express-button.button-with-image.disabled:hover {
+    background: transparent;
+}
+
+#payolution_mini_basket {
+    float: left;
+}
+
+.payolution-additional {
+    line-height: 30px;
+    font-size: 12px;
+    color: #979797;
+    font-weight: bold;
+}
+
+.payolution-additional a {
+    text-decoration: underline;
+    color: #979797;
+}
+
+.payolution-additional a:hover {
+    text-decoration: none;
+}
+
+.payolution-currency {
+    padding-left: 30px;
+    margin-bottom: 60px;
+}
+
+.payolution-currency .payolution-currency-info {
+    color: #979797;
+    font-size: 13px;
+    margin-right: 30px;
+}
+
+.payolution-currency input[type="submit"] {
+    background-color: #2282D0;
+    background-image: linear-gradient(to bottom, #36A2EA 0%, #2282D0 100%);
+    border: 1px solid #0089CF;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #0A6C93, 0 1px 2px 0 rgba(255, 255, 255, 0.5) inset;
+    width: auto;
+    margin: 40px 0 0 150px;
+    padding: 8px 1px;
+}
+
+.payolution-currency input[type="submit"]:hover, .payolution-currency input[type="submit"]:focus {
+    background-color: #0070BA;
+    background-image: linear-gradient(to bottom, #36A2EA 0%, #0070BA 100%);
+    box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px 0 #0A5D7E;
+}
+
+.payolution-currency input[type="submit"]:active {
+    background: none repeat scroll 0 0 #36A2EA;
+    border: 1px solid #066CA9;
+    box-shadow: 0 1px 2px 0 rgba(36, 43, 47, 0.46) inset;
+    height: 39px;
+    margin-bottom: -1px;
+}
+
+/* Payolution checkout steps */
+.payolution_checkout_steps {
+    margin: 0;
+    overflow: hidden;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+.payolution_checkout_steps li {
+    list-style: none;
+    padding: 0;
+    float: left;
+    height: 29px;
+    text-transform: uppercase;
+    line-height: 29px;
+    position: relative;
+    left: 0;
+    margin-left: -15px;
+    padding-left: 15px;
+    background: url(../img/steps.png) no-repeat 100% 0;
+}
+
+.payolution-widget {
+    margin-top: 10px;
+    height: 70px
+}
+
+.payolution-thankyou-iframe {
+    width: 600px;
+}
+
+
+.payolution-radio {
+
+}
+
+.payolution-radio ul {
+    display: block;
+    width: 600px;
+    margin-top: 25px;
+    border: 1px solid #e7e7e7;
+}
+
+.payolution-radio ul li {
+    height: 42px;
+    line-height: 42px;
+}
+
+.payolution-radio ul .dark {
+    background: #f4f4f4;
+}
+
+.payolution-radio ul li input {
+    float: left;
+    margin: 15px 15px 0px 20px;
+}
+
+.payolution-radio ul li img {
+    max-height: 30px;
+    float: left;
+    margin-top: 6px;
+}
+
+.radio-button-clickable {
+    cursor: pointer;
+}
+
+.payolution-notice-text {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #979797;
+}
+
+
+.payolution-notice-text a {
+    color: #979797;
+    text-decoration: underline;
+}
+.payolution-notice-text a:hover {
+    color: #979797;
+    text-decoration: none;
+}
+
+.payolutionPopupInfo.popupBox img.closePop {
+    right: 13px;
+    top: 13px;
+}
+
+.payolution-error {
+    margin: 30px;
+    font-size: 14px;
+    color: #db0000;
+}
+
+#payo-installment-wrapper {
+    width: 632px;
+}
+
+#payo-installment-tabs {
+    height: 29px;
+    margin-top: 15px;
+}
+
+#pay-installment-tabs li {
+    padding-left: 15px;
+}
+
+#installment-slider {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#payo-installment-data th {
+    text-align: left;
+    width: 150px;
+}
+
+#payo-installment-data tr:last-child th,
+#payo-installment-data tr:last-child td {
+    font-size: 130%;
+    padding-top: 10px;
+}
+
+.payo-installment-wrapper-left {
+    float: left;
+}
+
+.payo-installment-wrapper-right {
+    float: right;
+    text-align: left;
+    width : 250px;
+}
+
+.payo-order-installment-details-toggler,
+#payo-order-installment-details,
+#payo-order-installment-details #installment-slider {
+    display: none;
+}
+
+#payo-installment-details {
+    border: 2px solid #BBB;
+    border-left: none;
+    border-right: none;
+    background: #EEE;
+    max-height: 97px;
+    padding: 5px 10px;
+    overflow-y: hidden;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#payoInstallmentModal {
+    background: #FFF;
+    padding: 30px 40px;
+    display: none;
+    width: 400px;
+    height: 500px;
+    border: 3px solid #2e8e9e;
+}
+
+#payoInstallmentModal .description {
+    margin-top: 25px;
+}
+
+#payoInstallmentModal #payo-installment-details-toggler {
+    margin-top: 10px;
+    display: block;
+}
+
+#payoInstallmentModal .closePop {
+    border-radius: 50%;
+
+    padding: 3px;
+
+    background: #fff;
+    border: 2px solid #2e8e9e;
+    color: #2e8e9e;
+    text-align: center;
+
+    font: 10px Arial, sans-serif;
+}
+
+.payoSmall, .payoSmall * {
+    font-size: 13px !important;
+}
+
+.payoBold {
+    font-weight: bold;
+}
+
+.payoReadMore {
+    font-weight: normal!important;
+    font-size: 9px;
+}
+
+.payoLeft {
+    text-align: left!important;
+}
+
+#payoConfirmTerms,
+#payoPrivacyPolicy {
+    margin: 15px 0;
+    margin-left: -5px;
+}
+
+.payoLongCheckText {
+    width: auto!important;
+    max-width: 95%;
+    margin-bottom: 10px;
+}
+
+#payoPrivacyPolicy label span {
+    color: #1d7e96;
+    cursor : pointer;
+}
+
+#payoPrivacyPolicy label span:hover {
+    text-decoration: underline;
+}
+
+.featuredList .payoOldPrice a {
+    display: inline;
+    padding: 0;
+}
+
+.featuredList .payoOldPrice {
+    padding: 0px 10px 5px 10px;
+    font-size: 9px;
+}
+
+.gridView li.productData:hover .payoOldPrice a.payoReadMore {
+    color: #ffffff;
+}
+
+#payo-loader, .payo-loader {
+    position: absolute;
+    z-index: 200;
+    background: #FFF;
+    display: none;
+    margin-left: -2px;
+}
+
+#payo-loader div, .payo-loader div {
+    background: url(../img/ajax-loader.GIF);
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}
+
+.payo-check-installment-loader {
+    display: inline-block;
+    padding-left: 1em;
+    margin-left: 0;
+    position: relative;
+    height: 13px;
+}
+
+.payo-check-installment-loader div {
+    position: absolute;
+    top: -13px;
+}
+
+.payo-help,
+.oxInValid input.payo-help,
+.oxInValid input.payo-help:focus {
+    display: block;
+    float:left;
+    border : none;
+    width: 20px;
+    height: 20px;
+    cursor : pointer;
+    background: url('../img/payolution-question-ico.png') no-repeat;
+    margin: 0 10px;
+}
+
+.payo-help-text {
+    display: none;
+    float : right;
+    max-width: 238px;
+}
+.oxValidateError.payolution-oxValidateError-limit-width {
+    padding-right: 270px;
+}
+
+#payo-panel-bankInfo li,
+.payolution_usertext_payolution_invoice_b2b li,
+.payolution_usertext_payolution_invoice_b2c li,
+.payolution_usertext_payolution_installment li,
+.payolution_usertext_payolution_dd li{
+    width: 630px!important;
+}
+
+.pdfLink {
+    color: #1d7e96;
+}
+
+.pdfLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.gridView li.productData {
+    height: 250px;
+}
+
+.gridView li.productData .priceBlock {
+    height: 50px;
+}
+
+.payoSlider .ui-state-default, .payoSlider .ui-widget-content .ui-state-default, .payoSlider .ui-widget-header .ui-state-default {
+    border: 2px solid #d3d3d3!important;
+}
+
+#payo-installment-details-toggler:focus, #payo-installment-details-toggler:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+
+.payolution_usertext_payolution_invoice_b2b .payolution-select-margin {
+    margin: 13px 0;
+}
+
+.payolution_usertext_payolution_dd .payolution-birthday-margin,
+.payolution_usertext_payolution_invoice_b2c .payolution-birthday-margin
+{
+    margin-top: 13px;
+}
+
+.payolution-input-margin {
+     padding-bottom: 13px!important;
+ }
+
+.payo-error-container  {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
