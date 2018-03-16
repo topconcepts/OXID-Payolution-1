@@ -95,7 +95,7 @@ class Version20180304170739 extends AbstractMigration
      */
     private function addLanguages()
     {
-        require_once(dirname(__FILE__) . '/../../bootstrap.php');
+        require_once(dirname(__FILE__) . '/../../../../../bootstrap.php');
 
         $config = \OxidEsales\Eshop\Core\Registry::getConfig();
         $this->addSql('
