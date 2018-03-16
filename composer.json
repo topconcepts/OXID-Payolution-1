@@ -1,5 +1,5 @@
 {
-  "name": "tc/payolution",
+  "name": "oxid-esales/oxideshop-project",
   "description": "Payolution OXID module",
   "type": "oxideshop-module",
   "minimum-stability": "dev",
