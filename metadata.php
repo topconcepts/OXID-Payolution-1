@@ -150,11 +150,13 @@ $aModule = [
         [
             'template' => 'widget/product/boxproducts.tpl',
             'block' => 'widget_product_boxproduct_price',
+            'theme' => 'azure',
             'file' => '/views/blocks/widget/product/widget_product_boxproduct_price.tpl'
         ],
         [
             'template' => 'widget/product/boxproduct.tpl',
             'block' => 'widget_product_boxproduct_price',
+            'theme' => 'azure',
             'file' => '/views/blocks/widget/product/widget_product_boxproduct_price.tpl'
         ],
     ],
