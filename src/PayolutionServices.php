@@ -17,20 +17,20 @@
 namespace Payolution;
 
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\ApiInterface;
-use Payolution\Client\CacheClient;
-use Payolution\Client\Client;
-use Payolution\Client\Type\ConfigType;
-use Payolution\Client\WebService;
-use Payolution\Client\WebServiceLog;
-use Payolution\Config\Configuration;
-use Payolution\Logger\OrderLogger;
-use Payolution\Manager\ConfigManager;
-use Payolution\Manager\FormManager;
-use Payolution\Manager\OrderManager;
-use Payolution\Utils\FormatterUtils;
-use Payolution\Utils\MiniDiUtils;
-use Payolution\Validation\ServiceValidation;
+use TopConcepts\Payolution\Client\ApiInterface;
+use TopConcepts\Payolution\Client\CacheClient;
+use TopConcepts\Payolution\Client\Client;
+use TopConcepts\Payolution\Client\Type\ConfigType;
+use TopConcepts\Payolution\Client\WebService;
+use TopConcepts\Payolution\Client\WebServiceLog;
+use TopConcepts\Payolution\Config\Configuration;
+use TopConcepts\Payolution\Logger\OrderLogger;
+use TopConcepts\Payolution\Manager\ConfigManager;
+use TopConcepts\Payolution\Manager\FormManager;
+use TopConcepts\Payolution\Manager\OrderManager;
+use TopConcepts\Payolution\Utils\FormatterUtils;
+use TopConcepts\Payolution\Utils\MiniDiUtils;
+use TopConcepts\Payolution\Validation\ServiceValidation;
 
 /**
  * Class Payolution_Services

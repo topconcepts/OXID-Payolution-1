@@ -14,9 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Form;
+namespace TopConcepts\Payolution\Form;
+
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Order\OrderContext;
 
 /**
  * Class Payolution_Form_B2c

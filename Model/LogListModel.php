@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Core\Model\ListModel;
 use OxidEsales\Eshop\Core\DatabaseProvider as Db;
 
 /**
  * Class LogListModel
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class LogListModel extends ListModel
 {

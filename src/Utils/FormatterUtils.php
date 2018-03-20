@@ -14,12 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
+
 use OxidEsales\Eshop\Core\Registry;
 
 /**
  * Class FormatterUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class FormatterUtils
 {

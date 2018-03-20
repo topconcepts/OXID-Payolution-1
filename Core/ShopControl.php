@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Core;
+namespace TopConcepts\Payolution\Module\Core;
 
-use Payolution\Utils\JavascriptLibraryUtils;
+use TopConcepts\Payolution\Utils\JavascriptLibraryUtils;
 
 /**
  * Class ShopControl
  * @see ShopControl
- * @package Payolution\Module\Core
+ * @package TopConcepts\Payolution\Module\Core
  */
 class ShopControl extends ShopControl_Parent
 {

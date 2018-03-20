@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller;
+namespace TopConcepts\Payolution\Module\Controller;
 
 use OxidEsales\Eshop\Application\Model\Country;
 use OxidEsales\Eshop\Application\Model\CountryList;
@@ -23,16 +23,16 @@ use OxidEsales\Eshop\Core\Price;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsObject;
 use OxidEsales\Eshop\Core\ViewConfig;
-use Payolution\AccessPoint;
-use Payolution\Module\Core\Exception\PayolutionException;
-use Payolution\PayolutionModule;
-use Payolution\Utils\JavascriptLibraryUtils;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
+use TopConcepts\Payolution\PayolutionModule;
+use TopConcepts\Payolution\Utils\JavascriptLibraryUtils;
 
 /**
  * Extends oxViewConfig to enable access of additional data
  * Class ViewConfigController
  * @see ViewConfig
- * @package Payolution\Module\Controllers
+ * @package TopConcepts\Payolution\Module\Controllers
  */
 class ViewConfigController extends ViewConfigController_Parent
 {

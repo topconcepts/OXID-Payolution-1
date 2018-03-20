@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Basket;
+namespace TopConcepts\Payolution\Basket;
 
 use OxidEsales\Eshop\Application\Model\Basket;
 
@@ -24,7 +24,7 @@ use OxidEsales\Eshop\Application\Model\Basket;
  * be used in OrderingContext creation.
  *
  * Class DummyBasket
- * @package Payolution\Basket
+ * @package TopConcepts\Payolution\Basket
  */
 class DummyBasket extends Basket
 {

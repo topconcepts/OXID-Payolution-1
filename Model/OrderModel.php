@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Application\Model\Basket;
 use OxidEsales\Eshop\Application\Model\Country;
@@ -26,11 +26,11 @@ use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
 use OxidEsales\Eshop\Core\UtilsDate;
 use OxidEsales\Eshop\Core\UtilsView;
-use Payolution\AccessPoint;
-use Payolution\Exception\PayolutionException;
-use Payolution\Order\PayolutionOrder;
-use Payolution\Payment\PaymentMethod;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * OXID default oxOrder class extension to provide additional logic required by Payolution module.
@@ -38,7 +38,7 @@ use Payolution\PayolutionModule;
  *
  * Class OrderModel
  * @mixin Order
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class OrderModel extends OrderModel_Parent
 {

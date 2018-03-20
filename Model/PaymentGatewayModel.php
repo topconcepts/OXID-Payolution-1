@@ -14,12 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Application\Model\PaymentGateway;
-use Payolution\AccessPoint;
-use Payolution\Exception\PayolutionException;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Extending OXID default oxPaymentGateway class to perform needed payment procedures and actions
@@ -27,7 +27,7 @@ use Payolution\PayolutionModule;
  *
  * Class PaymentGatewayModel
  * @mixin PaymentGateway
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class PaymentGatewayModel extends PaymentGatewayModel_Parent
 {

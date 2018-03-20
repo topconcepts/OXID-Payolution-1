@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
 
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\AccessPoint;
-use Payolution\Module\Core\Exception\PayolutionException;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class JavascriptLibraryUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class JavascriptLibraryUtils
 {

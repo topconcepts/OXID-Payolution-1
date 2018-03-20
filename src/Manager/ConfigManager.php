@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Manager;
+namespace TopConcepts\Payolution\Manager;
 
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Config\Configuration;
+use TopConcepts\Payolution\Config\Configuration;
 
 /**
  * Retrieve and save configurations
  *
  * Class ConfigManager
- * @package Payolution\Manager
+ * @package TopConcepts\Payolution\Manager
  */
 class ConfigManager
 {

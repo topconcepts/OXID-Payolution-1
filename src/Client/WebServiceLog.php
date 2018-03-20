@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client;
+namespace TopConcepts\Payolution\Client;
 
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsDate;
-use Payolution\Logger\OrderLogger;
-use Payolution\Module\Model\LogModel;
+use TopConcepts\Payolution\Logger\OrderLogger;
+use TopConcepts\Payolution\Module\Model\LogModel;
 
 /**
  * Class WebServiceLog
- * @package Payolution\Client
+ * @package TopConcepts\Payolution\Client
  */
 class WebServiceLog extends WebService
 {

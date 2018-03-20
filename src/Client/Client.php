@@ -14,28 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client;
+namespace TopConcepts\Payolution\Client;
 
-use Payolution\Client\Request\AbstractRequest;
-use Payolution\Client\Request\CalculateRequest;
-use Payolution\Client\Request\CaptureRequest;
-use Payolution\Client\Request\PreAuthRequest;
-use Payolution\Client\Request\PreCheckRequest;
-use Payolution\Client\Request\PzRequest;
-use Payolution\Client\Request\RefundRequest;
-use Payolution\Client\Request\ReverseRequest;
-use Payolution\Client\Response\ErrorResponse;
-use Payolution\Client\Response\Response;
-use Payolution\Client\Type\Analysis\ItemType;
-use Payolution\Client\Type\ConfigType;
-use Payolution\Client\Type\CustomerType;
-use Payolution\Client\Type\PaymentType;
-use Payolution\Client\Type\PriceType;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Client\Request\AbstractRequest;
+use TopConcepts\Payolution\Client\Request\CalculateRequest;
+use TopConcepts\Payolution\Client\Request\CaptureRequest;
+use TopConcepts\Payolution\Client\Request\PreAuthRequest;
+use TopConcepts\Payolution\Client\Request\PreCheckRequest;
+use TopConcepts\Payolution\Client\Request\PzRequest;
+use TopConcepts\Payolution\Client\Request\RefundRequest;
+use TopConcepts\Payolution\Client\Request\ReverseRequest;
+use TopConcepts\Payolution\Client\Response\ErrorResponse;
+use TopConcepts\Payolution\Client\Response\Response;
+use TopConcepts\Payolution\Client\Type\Analysis\ItemType;
+use TopConcepts\Payolution\Client\Type\ConfigType;
+use TopConcepts\Payolution\Client\Type\CustomerType;
+use TopConcepts\Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class Client
- * @package Payolution\Client
+ * @package TopConcepts\Payolution\Client
  */
 class Client implements ApiInterface
 {

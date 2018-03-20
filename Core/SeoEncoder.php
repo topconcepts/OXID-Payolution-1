@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Core;
+namespace TopConcepts\Payolution\Module\Core;
 
 use OxidEsales\Eshop\Core\SeoEncoder as OxidSeoEncoder;
 use OxidEsales\Eshop\Core\Registry;
 
 /**
  * Class SeoEncoder
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class SeoEncoder extends OxidSeoEncoder
 {

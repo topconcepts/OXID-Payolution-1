@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type\Analysis;
+namespace TopConcepts\Payolution\Client\Type\Analysis;
 
-use Payolution\Client\Utils;
+use TopConcepts\Payolution\Client\Utils;
 
 /**
  * Class ItemType
- * @package Payolution\Client\Type\Analysis
+ * @package TopConcepts\Payolution\Client\Type\Analysis
  */
 class ItemType implements AnalysisTypeInterface
 {

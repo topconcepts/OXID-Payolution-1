@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin;
+namespace TopConcepts\Payolution\Module\Controller\Admin;
 
 use OxidEsales\Eshop\Application\Controller\Admin\ShopConfiguration;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsView;
-use Payolution\Module\Core\Exception\PayolutionException;
-use Payolution\Utils\JavascriptLibraryUtils;
+use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
+use TopConcepts\Payolution\Utils\JavascriptLibraryUtils;
 
 /**
  * Class JsLibraryController
- * @package Payolution\Module\Controllers\Admin
+ * @package TopConcepts\Payolution\Module\Controllers\Admin
  */
 class JsLibraryController extends ShopConfiguration
 {

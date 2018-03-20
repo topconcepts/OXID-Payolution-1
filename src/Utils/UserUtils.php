@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
 
 use OxidEsales\Eshop\Application\Model\User;
 
 /**
  * Class UserUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class UserUtils
 {

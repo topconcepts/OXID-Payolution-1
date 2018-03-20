@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Form;
+namespace TopConcepts\Payolution\Form;
 
 use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\Type\Customer\CompanyTypes;
+use TopConcepts\Payolution\Client\Type\Customer\CompanyTypes;
 
 /**
  * Class BindHelper
- * @package Payolution\Form
+ * @package TopConcepts\Payolution\Form
  */
 class BindHelper
 {

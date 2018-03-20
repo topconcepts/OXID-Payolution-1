@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Exception;
+namespace TopConcepts\Payolution\Exception;
 
 use OxidEsales\Eshop\Core\Exception\StandardException;
-use Payolution\Client\Response\ErrorResponse;
+use TopConcepts\Payolution\Client\Response\ErrorResponse;
 
 /**
  * Class PayolutionException
- * @package Payolution\Exception
+ * @package TopConcepts\Payolution\Exception
  */
 class PayolutionException extends StandardException
 {
@@ -29,7 +29,7 @@ class PayolutionException extends StandardException
      *   Caution:  these constants are hardcoded inside templates, so if you
      *   change these dont forget to change template.
      *
-     * @file \web\modules\Payolution\views\blocks\page\checkout\checkout_payment_errors.tpl
+     * @file \web\modules\TopConcepts\Payolution\views\blocks\page\checkout\checkout_payment_errors.tpl
      *
      */
 

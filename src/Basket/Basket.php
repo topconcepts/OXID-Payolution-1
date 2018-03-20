@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Basket;
+namespace TopConcepts\Payolution\Basket;
 
 /**
  * Class Basket
- * @package Payolution\Basket
+ * @package TopConcepts\Payolution\Basket
  */
 class Basket
 {

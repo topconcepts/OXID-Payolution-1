@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin;
+namespace TopConcepts\Payolution\Module\Controller\Admin;
 
 use OxidEsales\DoctrineMigrationWrapper\Migrations;
 use OxidEsales\DoctrineMigrationWrapper\MigrationsBuilder;
@@ -26,16 +26,16 @@ use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsView;
 use OxidEsales\Facts\Config\ConfigFile;
 use OxidEsales\Facts\Facts;
-use Payolution\AccessPoint;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\PayolutionModule;
 use OxidEsales\Eshop\Core\DatabaseProvider as Db;
-use Payolution\Module\Core\SeoEncoder;
+use TopConcepts\Payolution\Module\Core\SeoEncoder;
 
 /**
  * For module installation (setup) procedures.
  *
  * Class InstallController
- * @package Payolution\Module\Controller\Admin
+ * @package TopConcepts\Payolution\Module\Controller\Admin
  */
 class InstallController extends ToolsList
 {

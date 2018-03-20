@@ -23,18 +23,18 @@ use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
-use Payolution\Client\Response\CalculationResponse;
-use Payolution\Client\Response\ErrorResponse;
-use Payolution\Client\Type\PriceType;
-use Payolution\Config\Configuration;
-use Payolution\Exception\PayolutionException;
-use Payolution\Manager\FormManager;
-use Payolution\Order\OrderContext;
-use Payolution\Order\PayolutionOrder;
-use Payolution\Payment\PaymentMethod;
-use Payolution\Utils\FormatterUtils;
-use Payolution\Utils\UserUtils;
-use Payolution\Validation\ServiceValidation;
+use TopConcepts\Payolution\Client\Response\CalculationResponse;
+use TopConcepts\Payolution\Client\Response\ErrorResponse;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Config\Configuration;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Manager\FormManager;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Utils\FormatterUtils;
+use TopConcepts\Payolution\Utils\UserUtils;
+use TopConcepts\Payolution\Validation\ServiceValidation;
 
 /**
  * Class Payolution_Module

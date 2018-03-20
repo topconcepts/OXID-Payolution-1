@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller;
+namespace TopConcepts\Payolution\Module\Controller;
 
 use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Application\Model\User;
@@ -22,11 +22,11 @@ use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
 use OxidEsales\Eshop\Core\Session;
 use OxidEsales\Eshop\Core\UtilsServer;
-use Payolution\AccessPoint;
-use Payolution\Client\Response\CalculationResponse;
-use Payolution\Client\Type\PriceType;
-use Payolution\Exception\PayolutionException;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Client\Response\CalculationResponse;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Extends default OXID order controller logic.
@@ -34,7 +34,7 @@ use Payolution\PayolutionModule;
  *
  * Class OrderController
  * @see \OxidEsales\Eshop\Application\Controller\OrderController
- * @package Payolution\Module\Controller
+ * @package TopConcepts\Payolution\Module\Controller
  */
 class OrderController extends OrderController_Parent
 {

@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Request;
+namespace TopConcepts\Payolution\Client\Request;
 
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\Response\CalculationResponse;
-use Payolution\Client\Type\CalculationPaymentType;
-use Payolution\Client\Type\PaymentType;
-use Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Client\Response\CalculationResponse;
+use TopConcepts\Payolution\Client\Type\CalculationPaymentType;
+use TopConcepts\Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Client\Type\PriceType;
 
 /**
  * Class CalculateRequest
- * @package Payolution\Client\Request
+ * @package TopConcepts\Payolution\Client\Request
  */
 class CalculateRequest extends AbstractRequest
 {

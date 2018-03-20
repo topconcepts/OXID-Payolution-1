@@ -14,19 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin\Order;
+namespace TopConcepts\Payolution\Module\Controller\Admin\Order;
 
 use OxidEsales\Eshop\Application\Controller\Admin\OrderOverview;
 use OxidEsales\Eshop\Application\Model\Order;
 use OxidEsales\Eshop\Application\Model\UserPayment;
 use OxidEsales\Eshop\Core\Email;
-use Payolution\AccessPoint;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class OverviewController
  * @see OrderOverview
- * @package Payolution\Module\Controllers\Admin\Order
+ * @package TopConcepts\Payolution\Module\Controllers\Admin\Order
  */
 class OverviewController extends OverviewController_Parent
 {
@@ -43,7 +43,7 @@ class OverviewController extends OverviewController_Parent
             /** @var PayolutionModule $module */
             $module = oxNew(AccessPoint::class)->getModule();
             if ($oOrder->load($soxId) && $oOrder->oxorder__payo_pdf_sent->value !== '1' && $module->isPayolutionOrder($oOrder)) {
-                /** @var \Payolution\Module\Core\Email $emailService */
+                /** @var \TopConcepts\Payolution\Module\Core\Email $emailService */
                 $emailService = oxNew(Email::class);
                 $blSuccess = $emailService->sendPayolutionOrderPdf($oOrder);
                 if ($blSuccess) {

@@ -18,11 +18,11 @@ namespace Payolution;
 
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsServer;
-use Payolution\Exception\PayolutionException;
-use Payolution\Manager\OrderManager;
-use Payolution\Order\OrderContext;
-use Payolution\Order\PayolutionOrder;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Manager\OrderManager;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class Payolution_Events describes all events which occurs in frontend side.

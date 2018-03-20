@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin\ApiLog;
+namespace TopConcepts\Payolution\Module\Controller\Admin\ApiLog;
 
 use OxidEsales\EshopCommunity\Application\Controller\Admin\AdminController;
 
@@ -23,7 +23,7 @@ use OxidEsales\EshopCommunity\Application\Controller\Admin\AdminController;
  * Returns template, that arranges two other templates ("payolution_apilog.tpl")
  *
  * Class MainController
- * @package Payolution\Module\Controllers\Admin\ApiLog
+ * @package TopConcepts\Payolution\Module\Controllers\Admin\ApiLog
  */
 class MainController extends AdminController
 {

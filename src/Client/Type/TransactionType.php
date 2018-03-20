@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type;
+namespace TopConcepts\Payolution\Client\Type;
 
-use Payolution\Client\SerializableInterface;
+use TopConcepts\Payolution\Client\SerializableInterface;
 
 /**
  * Class TransactionType
- * @package Payolution\Client\Type
+ * @package TopConcepts\Payolution\Client\Type
  */
 class TransactionType implements SerializableInterface
 {

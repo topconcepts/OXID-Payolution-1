@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Request;
+namespace TopConcepts\Payolution\Client\Request;
 
-use Payolution\Client\Response\Response;
-use Payolution\Client\Type\TransactionType;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Client\Response\Response;
+use TopConcepts\Payolution\Client\Type\TransactionType;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class AbstractRequest
- * @package Payolution\Client\Request
+ * @package TopConcepts\Payolution\Client\Request
  */
 abstract class AbstractRequest
 {

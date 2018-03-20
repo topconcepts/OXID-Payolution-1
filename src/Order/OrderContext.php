@@ -14,20 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Order;
+namespace TopConcepts\Payolution\Order;
 
 use OxidEsales\Eshop\Application\Model\Address;
 use OxidEsales\Eshop\Application\Model\Basket as OxidBasket;
 use OxidEsales\Eshop\Application\Model\Country;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Basket\Basket;
+use TopConcepts\Payolution\Basket\Basket;
 use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Application\Model\User;
-use Payolution\Form\BaseFormAbstract;
-use Payolution\Form\BindHelper;
-use Payolution\Manager\FormManager;
-use Payolution\Payment\PaymentMethod;
-use Payolution\Utils\TransformUtils;
+use TopConcepts\Payolution\Form\BaseFormAbstract;
+use TopConcepts\Payolution\Form\BindHelper;
+use TopConcepts\Payolution\Manager\FormManager;
+use TopConcepts\Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Utils\TransformUtils;
 
 /**
  * Do not create instances from this class directly, use Payolution Module API
@@ -36,7 +36,7 @@ use Payolution\Utils\TransformUtils;
  * @see Payolution_Ordering_Manager::createOrderingContext()
  *
  * Class OrderContext
- * @package Payolution\Order
+ * @package TopConcepts\Payolution\Order
  */
 class OrderContext
 {

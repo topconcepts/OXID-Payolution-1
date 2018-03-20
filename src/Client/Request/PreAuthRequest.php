@@ -14,22 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Request;
+namespace TopConcepts\Payolution\Client\Request;
 
-use Payolution\Client\Type\AccountType;
-use Payolution\Client\Type\AnalysisType;
-use Payolution\Client\Type\CustomerType;
-use Payolution\Client\Type\PaymentType;
-use Payolution\Client\Type\TransactionType;
-use Payolution\Form\DirectDebitForm;
-use Payolution\Form\InstallmentDeForm;
-use Payolution\Form\InstallmentForm;
-use Payolution\Form\InstallmentGbForm;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Client\Type\AccountType;
+use TopConcepts\Payolution\Client\Type\AnalysisType;
+use TopConcepts\Payolution\Client\Type\CustomerType;
+use TopConcepts\Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Client\Type\TransactionType;
+use TopConcepts\Payolution\Form\DirectDebitForm;
+use TopConcepts\Payolution\Form\InstallmentDeForm;
+use TopConcepts\Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Form\InstallmentGbForm;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class PreAuthRequest
- * @package Payolution\Client\Request
+ * @package TopConcepts\Payolution\Client\Request
  */
 class PreAuthRequest extends AbstractRequest
 {

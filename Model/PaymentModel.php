@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsServer;
-use Payolution\AccessPoint;
-use Payolution\Module\Core\Exception\PayolutionException;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class Payolution_oxPayment extends OXID default oxPayment class to add additional
@@ -30,7 +30,7 @@ use Payolution\PayolutionModule;
  *
  * Class PaymentModel
  * @mixin Payment
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class PaymentModel extends PaymentModel_Parent
 {

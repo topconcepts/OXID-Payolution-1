@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin\Order;
+namespace TopConcepts\Payolution\Module\Controller\Admin\Order;
 
 use OxidEsales\Eshop\Application\Controller\Admin\OrderAddress;
-use Payolution\AccessPoint;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class OrderAddressController
  * @see OrderAddress
- * @package Payolution\Module\Controllers\Admin\Order
+ * @package TopConcepts\Payolution\Module\Controllers\Admin\Order
  */
 class OrderAddressController extends OrderAddressController_Parent
 {

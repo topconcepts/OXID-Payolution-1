@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Response;
+namespace TopConcepts\Payolution\Client\Response;
 
 /**
  * Class CalculationResponse
- * @package Payolution\Client\Response
+ * @package TopConcepts\Payolution\Client\Response
  */
 class CalculationResponse extends Response
 {

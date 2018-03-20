@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Core\Model\BaseModel;
 use OxidEsales\Eshop\Core\Field;
@@ -23,7 +23,7 @@ use OxidEsales\Eshop\Core\Field;
  * Payolution model class for table 'payo_logs'
  *
  * Class LogModel
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class LogModel extends BaseModel
 {

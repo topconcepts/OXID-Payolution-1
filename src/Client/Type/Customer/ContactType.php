@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type\Customer;
+namespace TopConcepts\Payolution\Client\Type\Customer;
 
-use Payolution\Client\SerializableInterface;
+use TopConcepts\Payolution\Client\SerializableInterface;
 
 /**
  * Class ContactType
- * @package Payolution\Client\Type\Customer
+ * @package TopConcepts\Payolution\Client\Type\Customer
  */
 class ContactType implements SerializableInterface
 {

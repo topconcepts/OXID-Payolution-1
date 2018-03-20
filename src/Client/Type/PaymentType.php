@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type;
+namespace TopConcepts\Payolution\Client\Type;
 
-use Payolution\Client\SerializableInterface;
-use Payolution\Client\Utils;
-use Payolution\Form\BaseFormAbstract;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Client\SerializableInterface;
+use TopConcepts\Payolution\Client\Utils;
+use TopConcepts\Payolution\Form\BaseFormAbstract;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class PaymentType
- * @package Payolution\Client\Type
+ * @package TopConcepts\Payolution\Client\Type
  */
 class PaymentType implements SerializableInterface, \Serializable
 {

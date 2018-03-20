@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type;
+namespace TopConcepts\Payolution\Client\Type;
 
 use OxidEsales\Eshop\Core\Module\Module;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\SerializableInterface;
-use Payolution\Client\Type\Analysis\AnalysisTypeInterface;
-use Payolution\Client\Type\Analysis\AccountType as AnalysisAccountType;
-use Payolution\Client\Type\Analysis\CompanyType;
-use Payolution\Client\Type\Analysis\CustomerType as AnalysisCustomerType;
-use Payolution\Client\Type\Analysis\ItemType;
-use Payolution\Client\Type\Analysis\ShippingType;
-use Payolution\Client\Type\Analysis\TargetCountryType;
-use Payolution\Client\Type\Analysis\TransportationType;
-use Payolution\Client\Utils;
+use TopConcepts\Payolution\Client\SerializableInterface;
+use TopConcepts\Payolution\Client\Type\Analysis\AnalysisTypeInterface;
+use TopConcepts\Payolution\Client\Type\Analysis\AccountType as AnalysisAccountType;
+use TopConcepts\Payolution\Client\Type\Analysis\CompanyType;
+use TopConcepts\Payolution\Client\Type\Analysis\CustomerType as AnalysisCustomerType;
+use TopConcepts\Payolution\Client\Type\Analysis\ItemType;
+use TopConcepts\Payolution\Client\Type\Analysis\ShippingType;
+use TopConcepts\Payolution\Client\Type\Analysis\TargetCountryType;
+use TopConcepts\Payolution\Client\Type\Analysis\TransportationType;
+use TopConcepts\Payolution\Client\Utils;
 
 /**
  * Class AnalysisType
- * @package Payolution\Client\Type
+ * @package TopConcepts\Payolution\Client\Type
  */
 class AnalysisType implements SerializableInterface, AnalysisTypeInterface
 {

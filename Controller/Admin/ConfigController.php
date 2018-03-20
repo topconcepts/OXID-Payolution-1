@@ -14,22 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin;
+namespace TopConcepts\Payolution\Module\Controller\Admin;
 
 use OxidEsales\Eshop\Application\Controller\Admin\ShopConfiguration;
 use OxidEsales\Eshop\Application\Model\Country;
 use OxidEsales\Eshop\Core\DatabaseProvider as Db;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
-use OxidEsales\Eshop\Core\ShopVersion;
 use OxidEsales\Eshop\Core\UtilsView;
-use Payolution\Exception\PayolutionException;
 
 /**
  * Class Payolution_Config for module configuration in OXID backend
  *
  * Class ConfigController
- * @package Payolution\Module\Controller\Admin
+ * @package TopConcepts\Payolution\Module\Controller\Admin
  */
 class ConfigController extends ShopConfiguration
 {

@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client;
+namespace TopConcepts\Payolution\Client;
 
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\Response\ErrorResponse;
-use Payolution\Client\Response\Response;
-use Payolution\Client\Type\Analysis\ItemType;
-use Payolution\Client\Type\CustomerType;
-use Payolution\Client\Type\PaymentType;
-use Payolution\Client\Type\PriceType;
-use Payolution\Form\InstallmentForm;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Client\Response\ErrorResponse;
+use TopConcepts\Payolution\Client\Response\Response;
+use TopConcepts\Payolution\Client\Type\Analysis\ItemType;
+use TopConcepts\Payolution\Client\Type\CustomerType;
+use TopConcepts\Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class CacheClient
- * @package Payolution\Client
+ * @package TopConcepts\Payolution\Client
  */
 class CacheClient implements ApiInterface
 {

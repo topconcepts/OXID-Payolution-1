@@ -15,8 +15,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Payolution\\Module\\": "../../../source/modules/tc/payolution",
-      "Payolution\\": "../../../source/modules/tc/payolution/src"
+      "TopConcepts\\Payolution\\Module": "../../../source/modules/tc/payolution",
+      "TopConcepts\\Payolution\\": "../../../source/modules/tc/payolution/src"
     }
   }
 }

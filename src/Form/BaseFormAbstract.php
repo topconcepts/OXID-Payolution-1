@@ -14,12 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Form;
-use Payolution\Order\OrderContext;
+namespace TopConcepts\Payolution\Form;
+
+use TopConcepts\Payolution\Order\OrderContext;
 
 /**
  * Class BaseFormAbstract
- * @package Payolution\Form
+ * @package TopConcepts\Payolution\Form
  */
 abstract class BaseFormAbstract
 {

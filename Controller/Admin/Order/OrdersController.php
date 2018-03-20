@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin\Order;
+namespace TopConcepts\Payolution\Module\Controller\Admin\Order;
 
 use OxidEsales\Eshop\Application\Controller\Admin\AdminDetailsController;
 use OxidEsales\Eshop\Application\Controller\Admin\OrderOverview;
@@ -23,19 +23,19 @@ use OxidEsales\Eshop\Core\DatabaseProvider as Db;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
 use OxidEsales\Eshop\Core\UtilsView;
-use Payolution\AccessPoint;
-use Payolution\AdminEvents;
-use Payolution\Basket\BasketItem;
-use Payolution\Exception\PayolutionException;
-use Payolution\Order\PayolutionOrder;
-use Payolution\PayolutionModule;
-use Payolution\Utils\FormatterUtils;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\AdminEvents;
+use TopConcepts\Payolution\Basket\BasketItem;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\PayolutionModule;
+use TopConcepts\Payolution\Utils\FormatterUtils;
 
 /**
  * Class Payolution_Orders. New tab for Order management page in OXID backend
  *
  * Class OrdersController
- * @package Payolution\Module\Controllers\Admin\Order
+ * @package TopConcepts\Payolution\Module\Controllers\Admin\Order
  */
 class OrdersController extends AdminDetailsController
 {

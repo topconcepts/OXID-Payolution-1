@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Request;
+namespace TopConcepts\Payolution\Client\Request;
 
-use Payolution\Client\Response\Response;
-use Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Client\Response\Response;
+use TopConcepts\Payolution\Client\Type\PaymentType;
 
 /**
  * Class CaptureRequest
- * @package Payolution\Client\Request
+ * @package TopConcepts\Payolution\Client\Request
  */
 class CaptureRequest extends AbstractRequest
 {

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Application\Model\CountryList;
 use OxidEsales\Eshop\Core\Registry;
@@ -25,7 +25,7 @@ use OxidEsales\Eshop\Core\Registry;
  *
  * Class CountryListModel
  * @see CountryList
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class CountryListModel extends CountryListModel_Parent
 {

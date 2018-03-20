@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
 
 use OxidEsales\Eshop\Application\Model\Basket as OxidBasket;
 use OxidEsales\Eshop\Application\Model\Country;
 use OxidEsales\Eshop\Application\Model\User;
-use Payolution\Basket\Basket;
+use TopConcepts\Payolution\Basket\Basket;
 use OxidEsales\Eshop\Core\Field;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
-use Payolution\Basket\BasketItem;
-use Payolution\Basket\DummyBasket;
-use Payolution\Client\Type\Analysis\ItemType;
-use Payolution\Client\Type\Analysis\ShippingType;
-use Payolution\Client\Type\CustomerType;
-use Payolution\Client\Type\PaymentType;
-use Payolution\Form\B2BForm;
-use Payolution\Form\B2CForm;
-use Payolution\Form\InstallmentForm;
-use Payolution\Order\OrderContext;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Basket\BasketItem;
+use TopConcepts\Payolution\Basket\DummyBasket;
+use TopConcepts\Payolution\Client\Type\Analysis\ItemType;
+use TopConcepts\Payolution\Client\Type\Analysis\ShippingType;
+use TopConcepts\Payolution\Client\Type\CustomerType;
+use TopConcepts\Payolution\Client\Type\PaymentType;
+use TopConcepts\Payolution\Form\B2BForm;
+use TopConcepts\Payolution\Form\B2CForm;
+use TopConcepts\Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class TransformUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class TransformUtils
 {

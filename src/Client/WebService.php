@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client;
+namespace TopConcepts\Payolution\Client;
 
 /**
  * Class WebService
- * @package Payolution\Client
+ * @package TopConcepts\Payolution\Client
  */
 class WebService
 {

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Core\Exception;
+namespace TopConcepts\Payolution\Module\Core\Exception;
 
 use OxidEsales\Eshop\Core\Exception\StandardException;
 

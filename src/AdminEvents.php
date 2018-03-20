@@ -16,10 +16,10 @@
  */
 namespace Payolution;
 
-use Payolution\Exception\PayolutionException;
-use Payolution\Manager\OrderManager;
-use Payolution\Order\OrderStatus;
-use Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Manager\OrderManager;
+use TopConcepts\Payolution\Order\OrderStatus;
+use TopConcepts\Payolution\Order\PayolutionOrder;
 
 /**
  * Class Payolution_AdminEvents describes all events which occurs in backend

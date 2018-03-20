@@ -14,22 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Validation;
+namespace TopConcepts\Payolution\Validation;
 
 use OxidEsales\Eshop\Core\Price;
-use Payolution\Config\Configuration;
-use Payolution\Exception\PayolutionException;
-use Payolution\Form\B2BForm;
-use Payolution\Form\B2CForm;
-use Payolution\Form\InstallmentForm;
-use Payolution\Manager\ConfigManager;
-use Payolution\Order\OrderContext;
-use Payolution\Payment\PaymentMethod;
-use Payolution\Utils\ValidationUtils;
+use TopConcepts\Payolution\Config\Configuration;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Form\B2BForm;
+use TopConcepts\Payolution\Form\B2CForm;
+use TopConcepts\Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Manager\ConfigManager;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Utils\ValidationUtils;
 
 /**
  * Class Payolution_Validation_Service
- * @package Payolution\Validation
+ * @package TopConcepts\Payolution\Validation
  */
 class ServiceValidation
 {

@@ -14,18 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Client\Type;
+namespace TopConcepts\Payolution\Client\Type;
 
-use Payolution\Client\SerializableInterface;
-use Payolution\Client\Type\Analysis\ShippingType;
-use Payolution\Client\Type\Customer\CompanyType;
-use Payolution\Client\Type\Customer\AddressType;
-use Payolution\Client\Type\Customer\ContactType;
-use Payolution\Client\Type\Customer\NameType;
+use TopConcepts\Payolution\Client\SerializableInterface;
+use TopConcepts\Payolution\Client\Type\Analysis\ShippingType;
+use TopConcepts\Payolution\Client\Type\Customer\CompanyType;
+use TopConcepts\Payolution\Client\Type\Customer\AddressType;
+use TopConcepts\Payolution\Client\Type\Customer\ContactType;
+use TopConcepts\Payolution\Client\Type\Customer\NameType;
 
 /**
  * Class CustomerType
- * @package Payolution\Client\Type
+ * @package TopConcepts\Payolution\Client\Type
  */
 class CustomerType implements SerializableInterface
 {

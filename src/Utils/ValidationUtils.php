@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
 
 use OxidEsales\Eshop\Application\Model\Address;
-use Payolution\Form\B2CForm;
-use Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Form\B2CForm;
+use TopConcepts\Payolution\Form\InstallmentForm;
 
 /**
  * Class ValidationUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class ValidationUtils
 {

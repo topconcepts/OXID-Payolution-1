@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Config;
+namespace TopConcepts\Payolution\Config;
 
 /**
  * Class Configuration
- * @package Payolution\Client\Config
+ * @package TopConcepts\Payolution\Client\Config
  */
 class Configuration
 {

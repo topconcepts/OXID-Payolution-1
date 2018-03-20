@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller\Admin\ApiLog;
+namespace TopConcepts\Payolution\Module\Controller\Admin\ApiLog;
 
 use OxidEsales\Eshop\Application\Controller\Admin\AdminListController;
-use Payolution\Module\Model\LogListModel;
-use Payolution\Module\Model\LogModel;
+use TopConcepts\Payolution\Module\Model\LogListModel;
+use TopConcepts\Payolution\Module\Model\LogModel;
 
 /**
  * Class ListController
- * @package Payolution\Module\Controllers\Admin\ApiLog
+ * @package TopConcepts\Payolution\Module\Controllers\Admin\ApiLog
  */
 class ListController extends AdminListController
 {

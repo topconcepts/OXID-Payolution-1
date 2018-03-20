@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Manager;
+namespace TopConcepts\Payolution\Manager;
 
 use OxidEsales\Eshop\Core\Exception\StandardException;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Form\B2BForm;
-use Payolution\Form\B2BNLForm;
-use Payolution\Form\B2CForm;
-use Payolution\Form\B2CNLForm;
-use Payolution\Form\BaseFormAbstract;
-use Payolution\Form\DirectDebitForm;
-use Payolution\Form\InstallmentDeForm;
-use Payolution\Form\InstallmentForm;
-use Payolution\Order\OrderContext;
-use Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Form\B2BForm;
+use TopConcepts\Payolution\Form\B2BNLForm;
+use TopConcepts\Payolution\Form\B2CForm;
+use TopConcepts\Payolution\Form\B2CNLForm;
+use TopConcepts\Payolution\Form\BaseFormAbstract;
+use TopConcepts\Payolution\Form\DirectDebitForm;
+use TopConcepts\Payolution\Form\InstallmentDeForm;
+use TopConcepts\Payolution\Form\InstallmentForm;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Payment\PaymentMethod;
 
 /**
  * Class FormManager
- * @package Payolution\Manager
+ * @package TopConcepts\Payolution\Manager
  */
 class FormManager
 {

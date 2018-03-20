@@ -14,19 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Controller;
+namespace TopConcepts\Payolution\Module\Controller;
 
 use OxidEsales\Eshop\Application\Controller\FrontendController;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\Request;
-use Payolution\AccessPoint;
-use Payolution\Client\Response\CalculationResponse;
-use Payolution\Client\Type\PriceType;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Client\Response\CalculationResponse;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class PdfDownloadController
- * @package Payolution\Module\Controllers
+ * @package TopConcepts\Payolution\Module\Controllers
  */
 class PdfDownloadController extends FrontendController
 {

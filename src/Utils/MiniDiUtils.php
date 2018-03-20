@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Utils;
+namespace TopConcepts\Payolution\Utils;
 
 /**
  * Class MiniDiUtils
- * @package Payolution\Utils
+ * @package TopConcepts\Payolution\Utils
  */
 class MiniDiUtils
 {

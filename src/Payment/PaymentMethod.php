@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Payment;
+namespace TopConcepts\Payolution\Payment;
 
 /**
  * oxid must have a records on `oxpayments` table with OXID key:
@@ -24,7 +24,7 @@ namespace Payolution\Payment;
  * 'payolution_invoice_b2c'  for  PaymentMethod::InvoiceB2c()
  *
  * Class PaymentMethod
- * @package Payolution\Payment
+ * @package TopConcepts\Payolution\Payment
  */
 class PaymentMethod
 {

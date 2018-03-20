@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Logger;
+namespace TopConcepts\Payolution\Logger;
 
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsDate;
-use Payolution\Module\Model\HistoryModel;
-use Payolution\Order\OrderStatus;
-use Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Module\Model\HistoryModel;
+use TopConcepts\Payolution\Order\OrderStatus;
+use TopConcepts\Payolution\Order\PayolutionOrder;
 
 /**
  * Class OrderLogger
- * @package Payolution\Logger
+ * @package TopConcepts\Payolution\Logger
  */
 class OrderLogger
 {

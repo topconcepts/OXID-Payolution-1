@@ -14,20 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Core;
+namespace TopConcepts\Payolution\Module\Core;
 
 use OxidEsales\Eshop\Application\Model\Content;
 use OxidEsales\Eshop\Application\Model\Order;
 use OxidEsales\Eshop\Core\Email as OxidEmail;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\AccessPoint;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Class Email
  * @see OxidEmail
  * @mixin OxidEmail
- * @package Payolution\Module\Core
+ * @package TopConcepts\Payolution\Module\Core
  */
 class Email extends Email_Parent
 {

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Manager;
+namespace TopConcepts\Payolution\Manager;
 
 use OxidEsales\Eshop\Application\Model\Basket;
 use OxidEsales\Eshop\Application\Model\Order;
@@ -22,21 +22,21 @@ use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Application\Model\UserPayment;
 use OxidEsales\Eshop\Core\Registry;
-use Payolution\Client\ApiInterface;
-use Payolution\Client\Response\Response;
-use Payolution\Client\Type\PriceType;
-use Payolution\Logger\OrderLogger;
-use Payolution\Exception\PayolutionException;
-use Payolution\Order\OrderContext;
-use Payolution\Order\OrderStatus;
-use Payolution\Order\PayolutionOrder;
-use Payolution\Payment\PaymentMethod;
-use Payolution\Utils\TransformUtils;
-use Payolution\Validation\ServiceValidation;
+use TopConcepts\Payolution\Client\ApiInterface;
+use TopConcepts\Payolution\Client\Response\Response;
+use TopConcepts\Payolution\Client\Type\PriceType;
+use TopConcepts\Payolution\Logger\OrderLogger;
+use TopConcepts\Payolution\Exception\PayolutionException;
+use TopConcepts\Payolution\Order\OrderContext;
+use TopConcepts\Payolution\Order\OrderStatus;
+use TopConcepts\Payolution\Order\PayolutionOrder;
+use TopConcepts\Payolution\Payment\PaymentMethod;
+use TopConcepts\Payolution\Utils\TransformUtils;
+use TopConcepts\Payolution\Validation\ServiceValidation;
 
 /**
  * Class OrderManager
- * @package Payolution\Manager
+ * @package TopConcepts\Payolution\Manager
  */
 class OrderManager
 {

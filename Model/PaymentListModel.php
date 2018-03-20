@@ -14,19 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution\Module\Model;
+namespace TopConcepts\Payolution\Module\Model;
 
 use OxidEsales\Eshop\Application\Model\PaymentList;
 use OxidEsales\Eshop\Application\Model\User;
-use Payolution\AccessPoint;
-use Payolution\PayolutionModule;
+use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\PayolutionModule;
 
 /**
  * Extending default OXID oxPaymentList class to add available Payolution payments
  *
  * Class PaymentListModel
  * @mixin PaymentList
- * @package Payolution\Module\Model
+ * @package TopConcepts\Payolution\Module\Model
  */
 class PaymentListModel extends PaymentListModel_Parent
 {
