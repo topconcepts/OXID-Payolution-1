@@ -10,7 +10,7 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "."
+      "target-directory": "tc"
     }
   },
   "autoload": {
