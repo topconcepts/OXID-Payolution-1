@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Payolution;
+namespace TopConcepts\Payolution;
 
 /**
  * Class Payolution_AccessPoint is used as main access point to Payolution

@@ -25,7 +25,7 @@ $sMetadataVersion = '2.0';
  * Module information
  */
 $aModule = [
-    'id' => 'tcpayolution',
+    'id' => 'payolution',
     'title' => 'Payolution',
     'description' => 'Payolution payment module',
     'version' => '1.2.0',
@@ -56,7 +56,7 @@ $aModule = [
         \OxidEsales\Eshop\Application\Model\CountryList::class => \TopConcepts\Payolution\Module\Model\CountryListModel::class,
         \OxidEsales\Eshop\Application\Model\Country::class => \TopConcepts\Payolution\Module\Model\CountryModel::class,
         \OxidEsales\Eshop\Application\Model\Order::class => \TopConcepts\Payolution\Module\Model\OrderModel::class,
-        \OxidEsales\Eshop\Application\Model\Payment::class => \TopConcepts\Payolution\Module\Model\PaymentModel::class,
+        \OxidEsales\Eshop\Applmasterication\Model\Payment::class => \TopConcepts\Payolution\Module\Model\PaymentModel::class,
         \OxidEsales\Eshop\Application\Model\PaymentList::class => \TopConcepts\Payolution\Module\Model\PaymentListModel::class,
         \OxidEsales\Eshop\Application\Model\PaymentGateway::class => \TopConcepts\Payolution\Module\Model\PaymentGatewayModel::class,
         \OxidEsales\Eshop\Application\Model\OrderArticle::class => \TopConcepts\Payolution\Module\Model\OrderArticleModel::class,
@@ -67,24 +67,24 @@ $aModule = [
     ],
     'templates' => [
         // backend tpl
-        'payolution_regional_settings.tpl' => 'tc/payolution/views/admin/tpl/payolution_regional_settings.tpl',
-        'payolution_expert.tpl' => 'tc/payolution/views/admin/tpl/payolution_expert.tpl',
-        'payolution_config.tpl' => 'tc/payolution/views/admin/tpl/payolution_config.tpl',
-        'payolution_orders.tpl' => 'tc/payolution/views/admin/tpl/payolution_orders.tpl',
-        'payolution_apilog.tpl' => 'tc/payolution/views/admin/tpl/payolution_apilog.tpl',
-        'payolution_apiloglist.tpl' => 'tc/payolution/views/admin/tpl/payolution_apiloglist.tpl',
-        'payolution_apilogdetails.tpl' => 'tc/payolution/views/admin/tpl/payolution_apilogdetails.tpl',
-        'payolution_install.tpl' => 'tc/payolution/views/admin/tpl/payolution_install.tpl',
-        'payolution_empty.tpl' => 'tc/payolution/views/admin/tpl/payolution_empty.tpl',
-        'payolution_jslibrary.tpl' => 'tc/payolution/views/admin/tpl/payolution_jslibrary.tpl',
-        'email/html/payolution_order_pdf_email.tpl' => 'tc/payolution/views/admin/tpl/email/html/payolution_order_pdf_email.tpl',
-        'email/plain/payolution_order_pdf_email.tpl' => 'tc/payolution/views/admin/tpl/email/plain/payolution_order_pdf_email.tpl',
+        'payolution_regional_settings.tpl' => 'payolution/views/admin/tpl/payolution_regional_settings.tpl',
+        'payolution_expert.tpl' => 'payolution/views/admin/tpl/payolution_expert.tpl',
+        'payolution_config.tpl' => 'payolution/views/admin/tpl/payolution_config.tpl',
+        'payolution_orders.tpl' => 'payolution/views/admin/tpl/payolution_orders.tpl',
+        'payolution_apilog.tpl' => 'payolution/views/admin/tpl/payolution_apilog.tpl',
+        'payolution_apiloglist.tpl' => 'payolution/views/admin/tpl/payolution_apiloglist.tpl',
+        'payolution_apilogdetails.tpl' => 'payolution/views/admin/tpl/payolution_apilogdetails.tpl',
+        'payolution_install.tpl' => 'payolution/views/admin/tpl/payolution_install.tpl',
+        'payolution_empty.tpl' => 'payolution/views/admin/tpl/payolution_empty.tpl',
+        'payolution_jslibrary.tpl' => 'payolution/views/admin/tpl/payolution_jslibrary.tpl',
+        'email/html/payolution_order_pdf_email.tpl' => 'payolution/views/admin/tpl/email/html/payolution_order_pdf_email.tpl',
+        'email/plain/payolution_order_pdf_email.tpl' => 'payolution/views/admin/tpl/email/plain/payolution_order_pdf_email.tpl',
 
         // frontend tplF
-        'inc/select_payment_element.tpl' => 'tc/payolution/views/blocks/page/checkout/inc/select_payment_element.tpl',
-        'inc/select_payment_element_flow.tpl' => 'tc/payolution/views/blocks/page/checkout/inc/select_payment_element_flow.tpl',
-        'inc/select_payment_installment.tpl' => 'tc/payolution/views/blocks/page/checkout/inc/select_payment_installment.tpl',
-        'invoice_b2b_select_payment_flow.tpl' => 'tc/payolution/views/blocks/page/checkout/invoice_b2b_select_payment_flow.tpl',
+        'inc/select_payment_element.tpl' => 'payolution/views/blocks/page/checkout/inc/select_payment_element.tpl',
+        'inc/select_payment_element_flow.tpl' => 'payolution/views/blocks/page/checkout/inc/select_payment_element_flow.tpl',
+        'inc/select_payment_installment.tpl' => 'payolution/views/blocks/page/checkout/inc/select_payment_installment.tpl',
+        'invoice_b2b_select_payment_flow.tpl' => 'payolution/views/blocks/page/checkout/invoice_b2b_select_payment_flow.tpl',
     ],
     'blocks' => [
         [

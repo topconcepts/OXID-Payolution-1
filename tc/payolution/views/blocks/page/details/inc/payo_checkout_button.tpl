@@ -14,12 +14,12 @@
     [{if $config->showInstallmentPriceOnDetailsPage() && $validation->installmentAvailable($price)}]
         [{assign var='installmentSliderRateTranslation' value="PAYO_PAYMENT_INSTALLMENT_RATE"|oxmultilangassign}]
         [{oxscript add="var installmentSliderRateTranslation = '"|cat:$installmentSliderRateTranslation|cat:"';"}]
-        [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/payolution.jquery.min.js") priority=1}]
-        [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/accounting.js") priority=10}]
-        [{assign var='payoInstallmentJsUrl' value=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/payolution/payo-installment.js")|cat:'?'|cat:$oViewConf->getPayoJsUpdateTime()}]
+        [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution.jquery.min.js") priority=1}]
+        [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/accounting.js") priority=10}]
+        [{assign var='payoInstallmentJsUrl' value=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution/payo-installment.js")|cat:'?'|cat:$oViewConf->getPayoJsUpdateTime()}]
         [{oxscript include=$payoInstallmentJsUrl priority=10}]
-        [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/cookie/jquery.cookie.js") priority=9}]
-        [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/payoInstallmentSlider.js") priority=10}]
+        [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/cookie/jquery.cookie.js") priority=9}]
+        [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/payoInstallmentSlider.js") priority=10}]
         [{oxscript add=$calculateInstalmentScript}]
         <div style="clear:both"></div>
         <span class="payoOldPrice oldPrice" data-price="[{$price->getPriceInActCurrency($price->getPrice())}]" data-currency="[{$currency->sign}]" style="display: none;">

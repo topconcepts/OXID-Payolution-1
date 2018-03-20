@@ -6,19 +6,19 @@
     [{assign var="payolution" value=$oViewConf->getPayolutionModule()}]
     [{assign var="session" value=$oViewConf->getSession()}]
     [{assign var="dynvalue" value=$session->getVariable('dynvalue')}]
-    [{assign var="pdfIcon" value=$oViewConf->getModuleUrl("tcpayolution", "out/src/img/pdf.png")}]
+    [{assign var="pdfIcon" value=$oViewConf->getModuleUrl("payolution", "out/src/img/pdf.png")}]
 
     [{assign var='installmentSliderRateTranslation' value="PAYO_PAYMENT_INSTALLMENT_RATE"|oxmultilangassign}]
     [{oxscript add="var installmentSliderRateTranslation = '"|cat:$installmentSliderRateTranslation|cat:"';"}]
-    [{oxstyle include=$oViewConf->getModuleUrl("tcpayolution", "out/src/css/payolution.css") priority=10}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/payolution.jquery.min.js") priority=1}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/accounting.js") priority=10}]
-    [{assign var='payoInstallmentJsUrl' value=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/payolution/payo-installment.js")|cat:'?'|cat:$oViewConf->getPayoJsUpdateTime()}]
+    [{oxstyle include=$oViewConf->getModuleUrl("payolution", "out/src/css/payolution.css") priority=10}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution.jquery.min.js") priority=1}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/accounting.js") priority=10}]
+    [{assign var='payoInstallmentJsUrl' value=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution/payo-installment.js")|cat:'?'|cat:$oViewConf->getPayoJsUpdateTime()}]
     [{oxscript include=$payoInstallmentJsUrl priority=10}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/jquery-ui-slider-pips.min.js") priority=10}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/libs/cookie/jquery.cookie.js") priority=9}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/payoInstallmentSlider.js") priority=10}]
-    [{oxscript include=$oViewConf->getModuleUrl("tcpayolution", "out/src/js/payo-order-step.js") priority=10}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/jquery-ui-slider-pips.min.js") priority=10}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/cookie/jquery.cookie.js") priority=9}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/payoInstallmentSlider.js") priority=10}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/payo-order-step.js") priority=10}]
     <a href="javascript:void(0)" id="payo-toggler-show" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_SHOW_DETAILS}]</a>
     <a href="javascript:void(0)" id="payo-toggler-hide" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_HIDE_DETAILS}]</a>
     <div id="payo-order-installment-details">

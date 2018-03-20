@@ -5,7 +5,7 @@
 [{/if}]
 [{assign var="basket" value=$paymentContext->basket()}]
 [{assign var="priceValue" value=$basket->totalOrderPrice()}]
-[{assign var="pdfIcon" value=$oViewConf->getModuleUrl("tcpayolution", "out/src/img/pdf.png")}]
+[{assign var="pdfIcon" value=$oViewConf->getModuleUrl("payolution", "out/src/img/pdf.png")}]
 <div id="payo-installment-wrapper">
     <div id="payo-loader"><div></div></div>
     [{if $oViewConf->isActiveThemeFlow()}]

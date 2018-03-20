@@ -1,5 +1,5 @@
 {
-  "name": "oxid-esales/oxideshop-project",
+  "name": "topconcepts/oxid-payolution",
   "description": "Payolution OXID module",
   "type": "oxideshop-module",
   "minimum-stability": "dev",
@@ -10,12 +10,12 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "tc/payolution"
+      "target-directory": "."
     }
   },
   "autoload": {
     "psr-4": {
-      "TopConcepts\\Payolution\\Module": "../../../source/modules/tc/payolution",
+      "TopConcepts\\Payolution\\Module\\": "../../../source/modules/tc/payolution",
       "TopConcepts\\Payolution\\": "../../../source/modules/tc/payolution/src"
     }
   }
