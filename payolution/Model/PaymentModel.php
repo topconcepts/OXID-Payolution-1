@@ -21,7 +21,7 @@ use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Core\UtilsServer;
 use TopConcepts\Payolution\AccessPoint;
-use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
+use TopConcepts\Payolution\Exception\PayolutionException;
 use TopConcepts\Payolution\PayolutionModule;
 
 /**
