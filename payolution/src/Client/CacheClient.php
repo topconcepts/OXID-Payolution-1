@@ -193,7 +193,7 @@ class CacheClient implements ApiInterface
     public function calculate(PriceType $price, $country)
     {
         $hash = $this->getHashKeyForCalculateCall($price, $country);
-        $cached = null;
+        $cached = $this->getCached($hash);
 
         return $cached ? $cached : $this->cache($hash,
             $this->api->calculate($price, $country)

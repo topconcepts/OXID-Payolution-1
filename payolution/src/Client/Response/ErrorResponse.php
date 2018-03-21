@@ -63,14 +63,14 @@ class ErrorResponse
      * given XML, which is gotten from payolution response, xpath:
      * /Transaction/Processing
      *
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      *
-     * @return Payolution_Client_ResponseError
+     * @return ErrorResponse
      */
-    public static function createFromXml(SimpleXMLElement $xml)
+    public static function createFromXml(\SimpleXMLElement $xml)
     {
-        /* @var $error Payolution_Client_ResponseError */
-        $error = oxNew('Payolution_Client_ResponseError');
+        /* @var $error ErrorResponse */
+        $error = oxNew(self::class);
 
         $error->status     = (string) $xml->Status;
         $error->statusCode = (string) $xml->Status['code'];
@@ -90,14 +90,14 @@ class ErrorResponse
      */
     public function serialize()
     {
-        $data    = array(
+        $data = [
           $this->statusCode,
           $this->reasonCode,
           $this->messageCode,
           $this->status,
           $this->reason,
           $this->message
-        );
+        ];
         $data [] = self::checksum($data);
 
         return base64_encode(gzdeflate(json_encode($data)));
@@ -109,7 +109,7 @@ class ErrorResponse
      *
      * @param $serializedData
      *
-     * @return Payolution_Client_ResponseError|null
+     * @return ErrorResponse|null
      */
     public static function deserialize($serializedData)
     {
@@ -128,8 +128,8 @@ class ErrorResponse
 
             if (self::checksum($data) === $crc) {
 
-                /* @var $error Payolution_Client_ResponseError */
-                $error = oxNew('Payolution_Client_ResponseError');
+                /* @var $error ErrorResponse */
+                $error = oxNew(self::class);
 
                 $error->statusCode  = $data[0];
                 $error->reasonCode  = $data[1];
