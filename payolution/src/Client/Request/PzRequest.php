@@ -25,18 +25,17 @@ use TopConcepts\Payolution\Payment\PaymentMethod;
  * Class PzRequest
  * @package TopConcepts\Payolution\Client\Request
  */
-class PzRequest extends PreAuthRequest {
+class PzRequest extends PreAuthRequest
+{
     /**
-     * @param string $preauthResponseId
      * @param PaymentMethod $paymentMethod
      * @param PaymentType $payment
      * @param AnalysisType[] $basketItems
      */
-    public function __construct($preauthResponseId, PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
+    public function __construct(PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
     {
         parent::__construct(NULL, $paymentMethod, new CustomerType(), $payment, $basketItems);
 
-        $this->transaction()->identification->referenceId = $preauthResponseId;
         $this->transaction()->analysis->customer->registrationLevel = null;
     }
 }

@@ -206,7 +206,7 @@ class OrderModel extends OrderModel_Parent
     }
 
     /**
-     * @param Exception $e
+     * @param \Exception $e
      */
     private function showExceptionError(\Exception $e)
     {
