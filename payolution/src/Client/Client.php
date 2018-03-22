@@ -76,6 +76,7 @@ class Client implements ApiInterface
     }
 
     /**
+     * @param string $precheckId
      * @param PaymentMethod $paymentMethod
      * @param CustomerType $customer
      * @param PaymentType $payment
@@ -92,16 +93,17 @@ class Client implements ApiInterface
     }
 
     /**
+     * @param $preauthResponseId
      * @param PaymentMethod $paymentMethod
      * @param PaymentType $payment
      * @param $basketItems
      *
      * @return Response
      */
-    public function update(PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
+    public function update($preauthResponseId, PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
     {
         /* @var $request PzRequest */
-        $request = oxNew(PzRequest::class, $paymentMethod, $payment, $basketItems);
+        $request = oxNew(PzRequest::class, $preauthResponseId, $paymentMethod, $payment, $basketItems);
 
         return $this->call($request);
     }

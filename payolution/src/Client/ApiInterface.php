@@ -41,6 +41,7 @@ interface ApiInterface
     public function precheck(PaymentMethod $paymentMethod, CustomerType $customer, PaymentType $payment, $basketItems);
 
     /**
+     * @param string $precheckId
      * @param PaymentMethod $paymentMethod
      * @param CustomerType $customer
      * @param PaymentType $payment
@@ -52,13 +53,14 @@ interface ApiInterface
     /**
      * PZ: Update of order number or change amount before shipment
      *
+     * @param $preauthResponseId
      * @param PaymentMethod $paymentMethod
      * @param PaymentType $payment
      * @param $basketItems
      *
      * @return mixed
      */
-    public function update(PaymentMethod $paymentMethod, PaymentType $payment, $basketItems);
+    public function update($preauthResponseId, PaymentMethod $paymentMethod, PaymentType $payment, $basketItems);
 
     /**
      * @param string $preauthResponseId

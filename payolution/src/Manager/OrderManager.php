@@ -299,10 +299,12 @@ class OrderManager
         $payment     = $this->transformUtils->getPaymentTypeFromContext($context);
         $basketItems = $this->transformUtils->getBasketItemsFromContext($context);
 
+        $preauthId = $order->preauthId();
+
         $payment->invoiceId = $order->invoiceNo();
 
         $this->throwIfError(
-            $this->api->update($context->paymentMethod(), $payment, $basketItems)
+            $this->api->update($preauthId, $context->paymentMethod(), $payment, $basketItems)
         );
 
         $order->setPreauthPrice($payment->amount);

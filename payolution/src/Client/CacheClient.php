@@ -122,6 +122,7 @@ class CacheClient implements ApiInterface
         $this->invalidateCalculateCallCache(PriceType::create($payment->amount), $customer->address->country);
 
         $hash = $this->hash('preauth', [
+            $precheckId,
             $paymentMethod,
             $customer,
             $payment,
@@ -131,21 +132,23 @@ class CacheClient implements ApiInterface
         $cached = $this->getCached($hash);
 
         return $cached ? $cached : $this->cache($hash,
-            $this->api->preauth($paymentMethod, $customer, $payment,
+            $this->api->preauth($precheckId, $paymentMethod, $customer, $payment,
                 $basketItems)
         );
     }
 
     /**
+     * @param $preauthResponseId
      * @param PaymentMethod $paymentMethod
      * @param PaymentType $payment
      * @param $basketItems
      *
      * @return mixed
      */
-    public function update(PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
+    public function update($preauthResponseId, PaymentMethod $paymentMethod, PaymentType $payment, $basketItems)
     {
-        return $this->api->update($paymentMethod, $payment, $basketItems);
+        return $this->api->update($preauthResponseId, $paymentMethod, $payment,
+            $basketItems);
     }
 
     /**
