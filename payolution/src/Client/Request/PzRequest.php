@@ -36,7 +36,7 @@ class PzRequest extends PreAuthRequest {
     {
         parent::__construct(NULL, $paymentMethod, new CustomerType(), $payment, $basketItems);
 
-        $this->transaction()->identification->referenceId = null;
+        $this->transaction()->identification->referenceId = $preauthResponseId;
         $this->transaction()->analysis->customer->registrationLevel = null;
     }
 }
