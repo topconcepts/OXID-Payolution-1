@@ -70,7 +70,7 @@ class PayolutionModule
     {
         $aModule = array('version' => '0.0.0');
 
-        include dirname(__FILE__) . '/../../metadata.php';
+        include dirname(__FILE__) . '/../metadata.php';
 
         return $aModule['version'];
     }

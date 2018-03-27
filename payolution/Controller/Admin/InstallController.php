@@ -295,7 +295,7 @@ class InstallController extends ToolsList
         // check if modules are set
         $blFound = false;
         foreach ($config->getConfigParam('aModules') as $sClass => $sExtend) {
-            if (strstr($sExtend, 'payolution')) {
+            if (strstr($sExtend, 'Payolution')) {
                 $blFound = true;
                 break;
             }
