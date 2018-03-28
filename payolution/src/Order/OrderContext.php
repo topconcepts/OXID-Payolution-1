@@ -91,6 +91,11 @@ class OrderContext
     private $bindHelper;
 
     /**
+     * @var array
+     */
+    private $countriesWithIBAN = ['DE', 'AT'];
+
+    /**
      * @param FormManager $formManager
      * @param User $user
      * @param $userIpAddress
@@ -269,9 +274,12 @@ class OrderContext
         return $this->userCountry() === 'GB';
     }
 
+    /**
+     * @return bool
+     */
     public function isCountryViable()
     {
-        return $this->isGermany();
+        return $this->isCountryRequireIBAN();
     }
 
     /**
@@ -313,4 +321,13 @@ class OrderContext
 
         return !empty($paymentError);
     }
+
+    /**
+     * @return bool
+     */
+    public function isCountryRequireIBAN()
+    {
+        return in_array($this->userCountry(), $this->countriesWithIBAN);
+    }
+
 }

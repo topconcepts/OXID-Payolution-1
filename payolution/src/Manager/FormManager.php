@@ -243,7 +243,7 @@ class FormManager
      */
     private function getInstallmentForm(OrderContext $context, $bindParams)
     {
-        return ($context->isGermany()) ?
+        return ($context->isCountryRequireIBAN()) ?
             oxNew(InstallmentDeForm::class, $context, $bindParams) :
             oxNew(InstallmentForm::class, $context, $bindParams);
     }
