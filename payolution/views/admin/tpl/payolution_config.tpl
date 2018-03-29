@@ -185,11 +185,11 @@
             <td class="w290">
                 <select name="confstrs[bPayolutionShowPriceOnDetails]" class="normalSelect w272">
                     <option value="0"
-                            [{if $bPayolutionShowPriceOnDetails == "0"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnDetails == "0"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_NO"}]
                     </option>
                     <option value="1"
-                            [{if $bPayolutionShowPriceOnDetails == "1"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnDetails == "1"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_YES"}]
                     </option>
                 </select>
@@ -205,11 +205,11 @@
             <td class="w290">
                 <select name="confstrs[bPayolutionShowPriceOnCategory]" class="normalSelect w272">
                     <option value="0"
-                            [{if $bPayolutionShowPriceOnCategory == "0"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnCategory == "0"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_NO"}]
                     </option>
                     <option value="1"
-                            [{if $bPayolutionShowPriceOnCategory == "1"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnCategory == "1"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_YES"}]
                     </option>
                 </select>
@@ -225,11 +225,11 @@
             <td class="w290">
                 <select name="confstrs[bPayolutionShowPriceOnHomePage]" class="normalSelect w272">
                     <option value="0"
-                            [{if $bPayolutionShowPriceOnHomePage == "0"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnHomePage == "0"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_NO"}]
                     </option>
                     <option value="1"
-                            [{if $bPayolutionShowPriceOnHomePage == "1"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnHomePage == "1"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_YES"}]
                     </option>
                 </select>
@@ -245,11 +245,11 @@
             <td class="w290">
                 <select name="confstrs[bPayolutionShowPriceOnBasket]" class="normalSelect w272">
                     <option value="0"
-                            [{if $bPayolutionShowPriceOnBasket == "0"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnBasket == "0"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_NO"}]
                     </option>
                     <option value="1"
-                            [{if $bPayolutionShowPriceOnBasket == "1"}]selected="selected"[{/if}]>
+                            [{if $confstrs.bPayolutionShowPriceOnBasket == "1"}]selected="selected"[{/if}]>
                         [{oxmultilang ident="PAYOLUTION_YES"}]
                     </option>
                 </select>

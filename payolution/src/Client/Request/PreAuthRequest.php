@@ -129,7 +129,6 @@ class PreAuthRequest extends AbstractRequest
                     /* @var $form InstallmentDeForm */
                     $transaction->analysis->account->holder  = $form->accountHolder()->value();
                     $transaction->analysis->account->iban    = $form->iban()->value();
-                    $transaction->analysis->account->country = 'DE';
                 }
 
                 if ($form instanceof InstallmentGbForm) {
