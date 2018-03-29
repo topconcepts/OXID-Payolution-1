@@ -168,51 +168,6 @@
     </table>
 </div>
 
-
-[{*channel data*}]
-<div class="payolution-country-row">
-    <div class="row">
-        <div class="sign plus"></div>
-        <div class="text">
-            [{oxmultilang ident="PAYOLUTION_CHANNEL_SETTINGS"}]
-        </div>
-    </div>
-    <div class="clear"></div>
-    <table class="country-options" style="display: none;">
-        <tr>
-            <td colspan="3">
-                <div class="text">[{oxmultilang ident="PAYOLUTION_CONFIG_ADDITIONAL_SYNC_SETUP"}]</div>
-            </td>
-        </tr>
-        <tr>
-            <td class="w340">
-                [{oxmultilang ident="PAYOLUTION_CONFIG_CHANNEL_CL"}]
-            </td>
-            <td class="w290">
-                <input type="text" class="live-config normal payolution-inside-shadow w250" name="confstrs[sPayolutionChannelCL]" value="[{$confstrs.sPayolutionChannelCL}]">
-                <input type="text" class="test-config normal payolution-inside-shadow w250" name="confstrs[sPayolutionChannelCLTest]" value="[{$confstrs.sPayolutionChannelCLTest}]">
-            </td>
-            <td class="infoblock">
-                [{oxinputhelp ident="HELP_PAYOLUTION_CONFIG_CHANNEL_CL" }]
-            </td>
-        </tr>
-
-        <tr>
-            <td class="w340">
-                [{oxmultilang ident="PAYOLUTION_CONFIG_PASSWORD_CL"}]
-            </td>
-            <td class="w290">
-                <input autocomplete="off" type="text" class="live-config normal payolution-inside-shadow w250" name="confstrs[sPayolutionPasswordCL]" value="[{$confstrs.sPayolutionPasswordCL}]">
-                <input autocomplete="off" type="text" class="test-config normal payolution-inside-shadow w250" name="confstrs[sPayolutionPasswordCLTest]" value="[{$confstrs.sPayolutionPasswordCLTest}]">
-            </td>
-            <td class="infoblock">
-                [{oxinputhelp ident="HELP_PAYOLUTION_CONFIG_PASSWORD_CL" }]
-            </td>
-        </tr>
-    </table>
-</div>
-
-
 [{*optical settings*}]
 <div class="payolution-country-row">
     <div class="row">

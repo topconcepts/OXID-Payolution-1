@@ -175,14 +175,11 @@ class Client implements ApiInterface
         $transaction->channel = $this->configuration->channel;
 
         if ($request instanceof CalculateRequest) {
-            $transaction->login = $this->configuration->calculationLogin;
-            $transaction->pwd   = $this->configuration->calculationPwd;
             $transaction->payment->invoiceId = md5(mt_rand());
-        } else {
-            $transaction->login = $this->configuration->login;
-            $transaction->pwd   = $this->configuration->pass;
         }
 
+        $transaction->login = $this->configuration->login;
+        $transaction->pwd   = $this->configuration->pass;
         $url               = $this->configuration->xml_url;
         $transaction->mode = $this->configuration->mode;
         $parameter         = 'load';

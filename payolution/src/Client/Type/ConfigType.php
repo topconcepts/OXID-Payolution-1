@@ -110,9 +110,6 @@ class ConfigType
         $this->pass    = isset($configuration['pass']) ? $configuration['pass'] : null;
         $this->sender  = isset($configuration['sender']) ? $configuration['sender'] : 'gateway';
 
-        $this->calculationLogin = isset($configuration['calculationLogin']) ? $configuration['calculationLogin'] : null;
-        $this->calculationPwd   = isset($configuration['calculationPwd']) ? $configuration['calculationPwd'] : null;
-
         $this->shopUrl = isset($configuration['shopUrl']) ? $configuration['shopUrl'] : null;
 
         $this->test_mode = isset($configuration['test_mode']) ? $configuration['test_mode'] : null;

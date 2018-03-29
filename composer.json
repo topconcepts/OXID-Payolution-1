@@ -1,6 +1,6 @@
 {
-  "name": "topconcepts/oxid-payolution",
-  "description": "Payolution OXID module",
+  "name": "topconcepts/oxid-payolution-6",
+  "description": "Payolution module for OXID eShop version 6.0.X",
   "type": "oxideshop-module",
   "minimum-stability": "dev",
   "prefer-stable": true,
