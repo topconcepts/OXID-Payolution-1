@@ -197,8 +197,6 @@ class PayolutionServices
           'login'            => $config->getLogin(),
           'pass'             => $config->getPassword(),
           'sender'           => $config->getSender(),
-          'calculationLogin' => $config->getChannelCL(),
-          'calculationPwd'   => $config->getPasswordCL(),
           'shopUrl'          => Registry::getConfig()->getShopUrl(),
         ];
 

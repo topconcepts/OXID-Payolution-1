@@ -53,15 +53,11 @@ class Configuration
         'sPayolutionSender'                => '',
         'sPayolutionLogin'                 => '',
         'sPayolutionPassword'              => '',
-        'sPayolutionChannelCL'             => '',
-        'sPayolutionPasswordCL'            => '',
         // - for test server
 
         'sPayolutionSenderTest'            => '',
         'sPayolutionLoginTest'             => '',
         'sPayolutionPasswordTest'          => '',
-        'sPayolutionChannelCLTest'         => '',
-        'sPayolutionPasswordCLTest'        => '',
         // --------
 
         'fPayolutionMinInstallment'        => 0,
@@ -101,7 +97,6 @@ class Configuration
         return $this->parameters['aPayolutionInsBankDataRequired'];
     }
 
-
     /**
      * Whether or not buyer should be allowed to create order with different
      * shipping and billing addresses
@@ -122,7 +117,6 @@ class Configuration
     {
         return $this->envSpecific('sPayolutionSender');
     }
-
 
     /**
      * Payolution user login
@@ -145,46 +139,6 @@ class Configuration
     }
 
     /**
-     * Payolution server Channel-Invoice-B2C
-     *
-     * @return string
-     */
-    public function getChannelInvoiceB2C()
-    {
-        return $this->envSpecific('sPayolutionChannelInvoiceB2C');
-    }
-
-    /**
-     * Payolution server Channel-Invoice-B2B
-     *
-     * @return string
-     */
-    public function getChannelInvoiceB2B()
-    {
-        return $this->envSpecific('sPayolutionChannelInvoiceB2B');
-    }
-
-    /**
-     * Payolution server Channel-Installment
-     *
-     * @return string
-     */
-    public function getChannelInstallment()
-    {
-        return $this->envSpecific('sPayolutionChannelIns');
-    }
-
-    /**
-     * Payolution server Channel-Pre-Check
-     *
-     * @return string
-     */
-    public function getChannelPreCheck()
-    {
-        return $this->envSpecific('sPayolutionChannelPreCheck');
-    }
-
-    /**
      * Payolution server Channel-CL
      *
      * @return string
@@ -195,25 +149,6 @@ class Configuration
     }
 
     /**
-     * Payolution server Channel-CL for GB
-     *
-     * @return string
-     */
-    public function getChannelCLGB()
-    {
-        return $this->envSpecific('sPayolutionChannelCLGB');
-    }
-
-    /**
-     * Payolution server DD-CL
-     *
-     * @return string
-     */
-    public function getChannelDD(){
-        return $this->envSpecific('sPayolutionChannelDD');
-    }
-
-    /**
      * Payolution server Password-CL
      *
      * @return string
@@ -221,16 +156,6 @@ class Configuration
     public function getPasswordCL()
     {
         return $this->envSpecific('sPayolutionPasswordCL');
-    }
-
-    /**
-     * Payolution server Password-CL for GB
-     *
-     * @return string
-     */
-    public function getPasswordCLGB()
-    {
-        return $this->envSpecific('sPayolutionPasswordCLGB');
     }
 
     /**

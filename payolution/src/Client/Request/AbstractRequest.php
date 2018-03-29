@@ -77,61 +77,6 @@ abstract class AbstractRequest
         return oxNew(Response::class)->parse($xml);
     }
 
-//    /**
-//     * @param  $customer
-//     * @param \SimpleXMLElement $output
-//     *
-//     * @return \SimpleXMLElement
-//     */
-//    protected function customerToXml($customer, \SimpleXMLElement $output)
-//    {
-//
-//        // Customer details
-//        $xmlCustomer                  = $output->Customer;
-//        $xmlCustomer->Name->Company   = $customer->company;
-//        $xmlCustomer->Name->Family    = $customer->lastname;
-//        $xmlCustomer->Name->Given     = $customer->firstname;
-//        $xmlCustomer->Name->Sex       = $customer->getCustomerGender();
-//        $xmlCustomer->Name->Birthdate = $customer->birthdate;
-//
-//        // Customer details (Contact)
-//        $xmlCustomer->Contact->Email = $customer->email;
-//        $xmlCustomer->Contact->Phone = $customer->telephone;
-//        $xmlCustomer->Contact->Ip    = $customer->getIp();
-//
-//        // Address
-//        $xmlCustomer->Address->City    = $customer->getAddress()->city;
-//        $xmlCustomer->Address->Country = $customer->getAddress()->country_id;
-//        $xmlCustomer->Address->Street = $customer->getAddress()->street;
-//        $xmlCustomer->Address->Zip    = $customer->getAddress()->postcode;
-//
-//        return $output;
-//    }
-//
-//    /**
-//     * @param Payolution_Client_Type_Payment $payment
-//     * @param SimpleXMLElement               $output
-//     *
-//     * @return SimpleXMLElement
-//     */
-//    protected function paymentToXml(
-//      Payolution_Client_Type_Payment $payment,
-//      SimpleXMLElement $output
-//    ) {
-//        if ($payment->operationType && $payment->paymentType) {
-//            $output->Payment->OperationType = $payment->operationType;
-//            $output->Payment->PaymentType   = $payment->paymentType;
-//        }
-//
-//        $xmlPresentation = $output->Payment->Presentation;
-//
-//        $xmlPresentation->Amount   = $this->formatPrice($payment->amount);
-//        $xmlPresentation->Currency = $payment->currency;
-//        $xmlPresentation->Usage    = $payment->usage;
-//
-//        return $output;
-//    }
-
     /**
      * Format price for Cash-Ticket (format 0.00)
      *
