@@ -59,8 +59,8 @@
                     <button id="fullDelivery" type="button"  onClick="Javascript:document.myedit0.fnc.value='shipOrder'">[{oxmultilang ident="PAYOLUTION_ORDERS_SHIP"}]</button>
                 [{/if}]
                 [{if $oView->isOrderPdfEnabled()}]
-                <button id="invoicePdf" type="button" class="payo-grey payo-right">[{oxmultilang ident="PAYOLUTION_ORDERS_PDF"}]</button>
-                [{assign var="pdfShown" value=true}]
+                    <button id="invoicePdf" type="button" class="payo-grey payo-right">[{oxmultilang ident="PAYOLUTION_ORDERS_PDF"}]</button>
+                    [{assign var="pdfShown" value=true}]
                 [{/if}]
                 <div style="clear:both"></div>
 
@@ -99,7 +99,8 @@
                                 <input type="checkbox" value="1" [{if $payolutionOrder->isCanceled()}]disabled="disabled"[{/if}] class="payo-order-article-check delivery" name="orderArticle[[{$oOrderArticle->oxorderarticles__oxid->value}]]" data-id="[{$oOrderArticle->oxorderarticles__oxid->value}]" />
                             </td>
                             <td valign="top" class="[{ $listclass}]">
-                                <input type="text" data-original-amount="[{$amount}]" data-price="[{$oOrderArticle->getPrice()}]" class="amount payo-field" value="[{$amount}]" name="articleAmount[[{$oOrderArticle->oxorderarticles__oxid->value}]]" style="display: none"/>
+                                [{assign var="Price" value=$oOrderArticle->getPrice()}]
+                                <input type="text" data-original-amount="[{$amount}]" data-price="[{$Price->getPrice()}]" class="amount payo-field" value="[{$amount}]" name="articleAmount[[{$oOrderArticle->oxorderarticles__oxid->value}]]" style="display: none"/>
                                 <span class="payo-amount">[{$amount}]</span>
                             </td>
                             <td valign="top" class="[{ $listclass}]">[{ $oOrderArticle->oxorderarticles__oxartnum->value }]</td>
@@ -144,9 +145,9 @@
                         <span class="payo-field-symbol">%</span>
                     </div>
                     [{if $payolutionOrder->availableRefundAmount() eq "0.00"}]
-                    <button disabled="disabled" id="fullRefund" type="button" class="payolution-button blue" onClick="Javascript:document.myedit0.fnc.value='refundOrder'">[{oxmultilang ident="PAYOLUTION_ORDERS_REFUND"}]</button>
+                        <button disabled="disabled" id="fullRefund" type="button" class="payolution-button blue" onClick="Javascript:document.myedit0.fnc.value='refundOrder'">[{oxmultilang ident="PAYOLUTION_ORDERS_REFUND"}]</button>
                     [{else}]
-                    <button id="fullRefund" type="button" class="payolution-button blue" onClick="Javascript:document.myedit0.fnc.value='refundOrder'">[{oxmultilang ident="PAYOLUTION_ORDERS_REFUND"}]</button>
+                        <button id="fullRefund" type="button" class="payolution-button blue" onClick="Javascript:document.myedit0.fnc.value='refundOrder'">[{oxmultilang ident="PAYOLUTION_ORDERS_REFUND"}]</button>
                     [{/if}]
                 [{/if}]
                 [{if $oView->isOrderPdfEnabled() && !isset($pdfShown)}]
@@ -186,7 +187,8 @@
                                 <input type="checkbox" value="1" [{if $payolutionOrder->isCanceled()}]disabled="disabled"[{/if}] class="payo-order-article-check" name="orderArticleRef[[{$oOrderArticle->oxorderarticles__oxid->value}]]" data-id="[{$oOrderArticle->oxorderarticles__oxid->value}]" />
                             </td>
                             <td valign="top" class="[{ $listclass}]">
-                                <input type="text" data-original-amount="[{$amount}]" data-price="[{$oOrderArticle->getPrice()}]" class="amount amountRef payo-field" value="[{$amount}]" name="articleAmountRef[[{$oOrderArticle->oxorderarticles__oxid->value}]]" style="display: none"/>
+                                [{assign var="Price" value=$oOrderArticle->getPrice()}]
+                                <input type="text" data-original-amount="[{$amount}]" data-price="[{$Price->getPrice()}]" class="amount amountRef payo-field" value="[{$amount}]" name="articleAmountRef[[{$oOrderArticle->oxorderarticles__oxid->value}]]" style="display: none"/>
                                 <span class="payo-amount">[{$amount}]</span>
                             </td>
                             <td valign="top" class="[{ $listclass}]">[{ $oOrderArticle->oxorderarticles__oxartnum->value }]</td>

@@ -77,7 +77,8 @@ class PayolutionServices
               'arguments' => ['services'],
             ],
             'admin_events'     => [
-              'class'     => AdminEvents::class
+              'class'     => AdminEvents::class,
+              'arguments' => ['services'],
             ],
             'forms'            => [
               'class'     => FormManager::class

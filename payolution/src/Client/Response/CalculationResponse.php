@@ -80,8 +80,8 @@ class CalculationResponse extends Response
 
             foreach ($details->Installment as $installment) {
                 $installments [] = array(
-                  'amount'  => (string) $installment->Amount,
-                  'dueDate' => (string) $installment->Due,
+                    'amount'  => (string) $installment->Amount,
+                    'dueDate' => (string) $installment->Due,
                 );
 
                 if (!$installmentAmount) {
@@ -90,14 +90,14 @@ class CalculationResponse extends Response
             }
 
             $this->_installmentInfo[$duration] = [
-              'installmentAmount' => $installmentAmount,
-              'interestRate'      => (string) $details->InterestRate,
-              'effectiveInterest' => (string) $details->EffectiveInterestRate,
-              'totalAmount'       => (string) $details->TotalAmount,
-              'installments'      => $installments,
-              'url'               => (string) $details->StandardCreditInformationUrl,
-              'privacyUrl'        => (string) $transaction->AdditionalInformation->DataPrivacyConsentUrl,
-              'termsUrl'          => (string) $transaction->AdditionalInformation->TacUrl,
+                'installmentAmount' => $installmentAmount,
+                'interestRate'      => (string) $details->InterestRate,
+                'effectiveInterest' => (string) $details->EffectiveInterestRate,
+                'totalAmount'       => (string) $details->TotalAmount,
+                'installments'      => $installments,
+                'url'               => (string) $details->CreditInformationUrl,
+                'privacyUrl'        => (string) $transaction->AdditionalInformation->DataPrivacyConsentUrl,
+                'termsUrl'          => (string) $transaction->AdditionalInformation->TacUrl,
             ];
         }
     }

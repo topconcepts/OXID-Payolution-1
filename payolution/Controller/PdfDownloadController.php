@@ -54,11 +54,6 @@ class PdfDownloadController extends FrontendController
      */
     private function downloadPdf($duration, $priceValue)
     {
-        /** @var PayolutionModule $module */
-        $module = oxNew(AccessPoint::class)->getModule();
-
-        $userName = $module->getConfig()->getChannelCL();
-        $password = $module->getConfig()->getPasswordCL();
 
         $rRequest = curl_init($this->getPdfDownloadUrl($duration, $priceValue));
         curl_setopt($rRequest, CURLOPT_RETURNTRANSFER, false);
@@ -66,7 +61,6 @@ class PdfDownloadController extends FrontendController
         curl_setopt($rRequest, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($rRequest, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt($rRequest, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($rRequest, CURLOPT_USERPWD, $userName . ":" . $password);
 
         // Execute request and download file
         $response = curl_exec($rRequest);
