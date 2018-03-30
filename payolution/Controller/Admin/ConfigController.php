@@ -112,10 +112,10 @@ class ConfigController extends ShopConfiguration
         $activeSnippet = $country->getSqlActiveSnippet();
 
         $config = Registry::getConfig();
-        $this->_aViewData['confstrs']['bPayolutionShowPriceOnBasket'] = $config->getConfigParam('bPayolutionShowPriceOnBasket');
-        $this->_aViewData['confstrs']['bPayolutionShowPriceOnCategory'] = $config->getConfigParam('bPayolutionShowPriceOnCategory');
-        $this->_aViewData['confstrs']['bPayolutionShowPriceOnDetails'] = $config->getConfigParam('bPayolutionShowPriceOnDetails');
-        $this->_aViewData['confstrs']['bPayolutionShowPriceOnHomePage'] = $config->getConfigParam('bPayolutionShowPriceOnHomePage');
+        $this->_aViewData['bPayolutionShowPriceOnBasket'] = $config->getConfigParam('bPayolutionShowPriceOnBasket');
+        $this->_aViewData['bPayolutionShowPriceOnCategory'] = $config->getConfigParam('bPayolutionShowPriceOnCategory');
+        $this->_aViewData['bPayolutionShowPriceOnDetails'] = $config->getConfigParam('bPayolutionShowPriceOnDetails');
+        $this->_aViewData['bPayolutionShowPriceOnHomePage'] = $config->getConfigParam('bPayolutionShowPriceOnHomePage');
 
         $this->_aViewData['activeCountries'] = $db
             ->getAll('SELECT `OXISOALPHA2`, `OXTITLE` FROM '.$countryTable.' WHERE '.$activeSnippet);
@@ -221,7 +221,6 @@ class ConfigController extends ShopConfiguration
         $sModule = $this->_getModuleForConfigVars();
 
         foreach ($aConfVars as $sName => $sValue) {
-
             if (in_array($sName, $aKeys)) {
                 $sCheckValue = $this->replaceLocationString($sValue);
                 if (!$this->checkImageHttpStatus($sCheckValue, $sName)) {
