@@ -1,7 +1,7 @@
 [{include file="headitem.tpl" title="GENERAL_ADMIN_TITLE"|oxmultilangassign}]
 [{assign var="sPjQuery" value=$oViewConf->getPayolutionModuleUrl('out/src/js/libs/payolution.jquery.min.js')}]
 [{assign var="sjQuery" value=$oViewConf->getPayolutionModuleUrl('out/src/js/libs/jquery.min.js')}]
-[{assign var="sJsControl" value=$oViewConf->getPayolutionModuleUrl('out/src/js/payo-Admin-order.js')}]
+[{assign var="sJsControl" value=$oViewConf->getPayolutionModuleUrl('out/src/js/payo-admin-order.js')}]
 [{assign var="payoAdminCss" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/css/payolution_admin.css')}]
 [{assign var="payoLogo" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/images/payolution-logo.png')}]
 [{assign var="historyLogo" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/images/history.png')}]
