@@ -194,10 +194,10 @@ class PayolutionServices
     private function createPayolutionApiConfig(Configuration $config)
     {
         $result = [
-          'channel'          => ConfigType::TYPE_CHANNEL_GATEWAY,
+          'channel'          => $config->getLogin(),
           'login'            => $config->getLogin(),
           'pass'             => $config->getPassword(),
-          'sender'           => $config->getSender(),
+          'sender'           => $config->getLogin(),
           'shopUrl'          => Registry::getConfig()->getShopUrl(),
         ];
 
