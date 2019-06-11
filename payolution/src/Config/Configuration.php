@@ -168,7 +168,7 @@ class Configuration
     {
         $url = $this->envSpecific('installmentJsLibraryUrl');
 
-        return $url ? $url . '?id=' . $this->getChannelCL() : null;
+        return $url ? $url . '?id=' . $this->getLogin(). "-installment" : null;
     }
 
     /**
