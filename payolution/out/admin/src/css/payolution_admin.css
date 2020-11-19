@@ -1,0 +1,685 @@
+/* Overriding default oxid values */
+div.box {
+    border: none;
+    width: 100%;
+}
+
+div.errorbox {
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    color: #A94442;
+    width: 978px;
+
+}
+
+div.list {
+    border-bottom: 1px solid #E1E1E1;
+}
+
+div.list {
+    width: 1020px;
+}
+
+div.tabs {
+    display: none;
+}
+
+/* End */
+
+div.main-container a {
+    color: #0089d0;
+}
+
+.w290 {
+    width: 290px;
+}
+
+.w340 {
+    width: 340px;
+}
+
+.w80 {
+    width: 80px;
+}
+
+.w460 {
+    width: 460px;
+}
+
+.center {
+    text-align: center;
+}
+
+.w34 {
+    width: 34px;
+}
+
+.w40 {
+    width: 40px;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.w267 {
+    width: 267px;
+}
+
+.w420 {
+    width: 420px;
+}
+
+.w272 {
+    width: 272px;
+}
+
+.main-container {
+    font-family: arial narrow, helvetica, sans-serif !important;
+    max-width: 1000px;
+    padding-top: 20px;
+}
+
+.corners {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.w660 {
+    width: 660px;
+    margin-bottom: 25px;
+    color: #727276;
+    line-height: 20px;
+}
+
+.mgt20 {
+    margin-top: 20px;
+}
+
+.payolution-blue-button {
+    display: block;
+    background-color: rgb(38, 82, 128) !important;
+    color: #FFF;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    padding: 0 15px 0 15px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mg0 {
+    margin: 0;
+    line-height: 20px;
+}
+
+.se {
+    background-image: url('../images/payolution-flag-se.png');
+}
+
+.de {
+    background-image: url('../images/payolution-flag-de.png');
+}
+
+.ch {
+    background-image: url('../images/payolution-flag-ch.png');
+}
+
+.nl {
+    background-image: url('../images/payolution-flag-nl.png');
+}
+
+.at {
+    background-image: url('../images/payolution-flag-at.png');
+}
+
+.no {
+    background-image: url('../images/payolution-flag-no.png');
+}
+
+.fi {
+    background-image: url('../images/payolution-flag-fi.png');
+}
+
+.dk {
+    background-image: url('../images/payolution-flag-dk.png');
+}
+
+hr.line {
+    background-color: #E1E1E1;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+div.clear {
+    clear: both;
+}
+
+/* Start page  */
+div.payolution-version {
+    height: 45px;
+    color: #56a500;
+    line-height: 45px;
+    background-color: #F6F6F6;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+div.payolution-version span {
+    background-image: url('../images/payolution-version-ico.png');
+    width: 28px;
+    height: 27px;
+    float: left;
+    margin: 9px 15px 0 10px;
+    display: block;
+}
+
+div.payolution-intro {
+    padding-bottom: 20px;
+    display: table;
+}
+
+h1.payolution {
+    font-size: 26px;
+    color: #000010;
+    font-weight: 200 !important;
+}
+
+div.payolution-intro .payolution-logo {
+    display: table-cell;
+    background: url('../images/payolution-logo.png') no-repeat center;
+    width: 345px;
+}
+
+div.payolution-intro .payolution-intro-text {
+    display: table-cell;
+    padding-right: 20px;
+    color: #727276;
+    width: 660px;
+    height: 100px;
+}
+
+table.payolution-expert {
+    border-collapse: collapse;
+    width: 100%;
+    color: #47474e;
+    margin-bottom: 35px;
+}
+
+table.payolution-contacts {
+    border-spacing: 3px 0px;
+    border-collapse: separate;
+
+    width: 100%;
+    color: #47474e;
+    margin-bottom: 35px;
+}
+
+table.payolution-contacts th {
+    background-color: rgb(38, 82, 128);
+    height: 5px;
+}
+
+table.payolution-expert td {
+    border: 1px solid #e1e1e1;
+    padding: 30px 25px;
+    text-align: left;
+}
+
+table.payolution-contacts td {
+    border-bottom: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    padding: 30px 25px;
+    text-align: left;
+}
+
+div.payolution-flag {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+}
+
+table.payolution-contacts .payolution-contact-info {
+    float: right;
+    width: 215px;
+}
+
+table.payolution-contacts .payolution-contact-info p {
+    margin: 0 0 0 0;
+}
+
+table.payolution-contacts .payolution-contact-info p.lh {
+    line-height: 17px;
+}
+
+table.payolution-contacts .payolution-contact-info p span {
+    font-weight: bold;
+}
+
+table.payolution-contacts .payolution-contact-info {
+    font-size: 12px;
+}
+
+table.payolution-contacts .payolution-contact-info .payolution-contact-title-big {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table.payolution-contacts .payolution-contact-info .payolution-contact-title {
+    margin-bottom: 15px;
+}
+
+div.payolution-download {
+    color: #47474e;
+    padding-top: 35px;
+    border-top: 1px #e1e1e1 solid;
+}
+
+div.payolution-download .ico {
+    width: 82px;
+    height: 81px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    background: url('../images/payolution-download.png') no-repeat center;
+}
+
+div.payolution-download h2 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+div.payolution-download .content {
+    width: 380px;
+    float: left;
+}
+
+div.payolution-download .payolution-button-container {
+    width: 225px;
+    padding-left: 20px;
+    float: left;
+    height: 30px;
+}
+
+div.payolution-download a.payolution-download-button {
+    display: block;
+    background-color: rgb(38, 82, 128);
+    color: #FFFFFF;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    width: 140px;
+}
+
+div.payolution-download a.payolution-download-button:hover {
+    text-decoration: none;
+}
+
+/* ------------- */
+/* Payolution expert */
+.payolution-inside-shadow {
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
+}
+
+table.payolution-expert .txtfield {
+    width: 256px;
+    resize: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #737373;
+    min-height: 150px;
+}
+
+table.payolution-expert .payolution-expert-title {
+    border-bottom: 1px #E1E1E1 solid;
+    margin-bottom: 17px;
+    font-size: 14px;
+    padding-bottom: 13px;
+    color: #2b2b36;
+    display: inline-block;
+    width: 100%;
+}
+
+table.payolution-expert .left {
+    float: left;
+    margin-right: 15px;
+}
+
+table.payolution-expert .btnShowHelpPanel {
+    float: left;
+    background: url('../images/payolution-question-ico.png') no-repeat;
+}
+
+span.info-icon {
+    background: url('../images/payolution-question-ico.png') no-repeat;
+    border: 0 none;
+    color: rgba(0, 0, 0, 0);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* ------------- */
+/* Regional settings */
+div.main-container .payolution-expandable-list {
+    border-top: 1px solid #E1E1E1;
+}
+
+div.payolution-expandable-list .payolution-country-row {
+    width: 100%;
+    line-height: 60px;
+}
+
+div.payolution-country-row .row {
+    width: 100%;
+    height: 61px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    margin-bottom: 5px;
+}
+
+div.payolution-country-row .row.row-open {
+    background-color: rgb(38, 82, 128);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+div.payolution-country-row .sign {
+    float: left;
+    font-size: 25px;
+    color: #bababa;
+    width: 30px;
+    min-height: 60px;
+    cursor: pointer;
+}
+
+div.payolution-country-row .sign.plus {
+    background: url('../images/plus.png') no-repeat center;
+}
+
+div.payolution-country-row .sign.minus {
+    background: url('../images/minus.png') no-repeat center;
+}
+
+div.payolution-country-row .text {
+    float: left;
+    font-size: 20px;
+    color: rgb(38, 82, 128);
+}
+
+div.payolution-country-row .row.row-open .text {
+    color: #FFFFFF;
+}
+
+.payo-config-title {
+    font-size: 20px;
+    color: rgb(38, 82, 128);
+}
+
+div.payolution-country-row .text.inactive {
+    color: #9C9C9C;
+}
+
+div.payolution-country-row .flag {
+    float: right;
+}
+
+div.payolution-row-flag {
+    width: 48px;
+    height: 36px;
+    display: block;
+    float: right;
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+table.country-options {
+    border-collapse: collapse;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    width: 955px;
+    color: #47474e;
+
+}
+
+table.country-options td {
+    height: 45px;
+    padding: 0 0 0 15px;
+    white-space: nowrap;
+}
+
+table.country-options .name {
+    width: 200px;
+    color: #2b2b36;
+}
+
+table.country-options .infoblock .btnShowHelpPanel {
+    float: left;
+    background: url('../images/payolution-question-ico.png') no-repeat;
+}
+
+table.country-options .infoblock img {
+    height: 35px;
+    margin-top: 5px;
+}
+
+table.country-options .normalSelect {
+    height: 35px;
+    border: 1px #CCC solid;
+    padding: 7px 10px;
+    color: #737373;
+}
+
+table.country-options .normalSelect:disabled {
+    background-color: #F0F0F0;
+}
+
+table.country-options .normal {
+    height: 35px;
+    border: 1px #CCC solid;
+    padding: 0 10px 0 10px;
+    color: #737373;
+}
+
+table.country-options .dark {
+    background-color: #F6F6F6;
+}
+
+/* ----------------- */
+table.payment-info {
+    width: 600px;
+}
+
+table.payment-info td {
+    line-height: 25px;
+}
+
+table.payment-info .dark {
+    background-color: #F6F6F6;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 22px;
+    margin-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+}
+
+.payolution-alert-info {
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #3A87AD;
+}
+
+.payolution-alert-info a {
+    color: #008CD4;
+    text-decoration: none;
+}
+
+.payolution-alert-info a:hover {
+    text-decoration: underline;
+}
+
+#payo-history tr:first-child td {
+    font-weight: bold;
+}
+
+
+
+
+
+/* ------- ORDERS ------------ */
+.payo-wrapper {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.payo-wrapper hr {
+    color: #EAEAEA;
+    background: #EAEAEA;
+    margin: 10px 0 20px 0;
+}
+
+.payo-wrapper button,
+.payo-wrapper input[type='submit'] {
+    background: #326694;
+    border : 1px solid #326694;
+    padding: 0 20px;
+    height: 28px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.payo-wrapper button:hover,
+.payo-wrapper input[type='submit']:hover
+{
+    text-decoration: underline;
+    cursor : pointer;
+}
+
+.payo-right {
+    float: right;
+}
+
+.payo-grey {
+    background: #FFF!important;
+    color: #666!important;
+    border-color: #AAA!important;
+}
+
+.payo-logo {
+    float: right;
+}
+
+.payo-title {
+    font-size: 20px;
+    color: #326694;
+}
+
+#payoOrderArticles {
+    margin-top: 20px;
+}
+
+.payo-wrapper table {
+    margin: 10px 0;
+}
+
+.payo-wrapper .listheader {
+    height: 28px;
+    border-right: none!important;
+}
+
+.payo-wrapper .listheader:last-child {
+    border-right: 1px solid #C8C8C8!important;
+}
+
+.payo-wrapper td.listitem,
+.payo-wrapper td.listitem2,
+.payo-wrapper td.listitem3 {
+    padding: 8px 15px;
+    vertical-align: middle;
+    border-right: none;
+}
+
+.payo-wrapper td.listitem2 {
+    background-color: #F0F0FA;
+}
+
+#payo-history td {
+    min-width: 100px;
+}
+
+#payo-history tr:not(:last-child) td {
+    padding-left: 2px;
+}
+
+.payo-field {
+    display: inline-block;
+    border: 1px solid #AAA;
+    background: #F5F5F5;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+div.payo-field input {
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: right;
+    width: 50px;
+}
+
+input.payo-field {
+    width: 30px;
+}
+
+#payo-history-logo {
+    float: left;
+    margin-right: 20px;
+}
+
+.payo-logo-small {
+    width: 20px;
+    height: 22px;
+    float: left;
+    background: url('../images/payolution-logo-small.png') no-repeat center;
+}
+
+.payo-server-config-title-block {
+    position: relative;
+    left: -45px;
+}
+
+.test-config {
+    display: none;
+}
+
+div.successbox {
+    background-color: #2DECA9!important;
+    border-color: #08A764!important;
+    color: #11835B!important;
+    width: 978px;
+
+}
+
+.payo-wrapper button#fullRefund[disabled="disabled"] {
+    background-color: #c8c8c8;
+}

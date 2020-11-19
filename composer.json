@@ -1,0 +1,22 @@
+{
+  "name": "topconcepts/oxid-payolution-6",
+  "description": "Payolution module for OXID eShop version 6.0.X",
+  "type": "oxideshop-module",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=5.6"
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "tc"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "TopConcepts\\Payolution\\Module\\": "../../../source/modules/tc/payolution",
+      "TopConcepts\\Payolution\\": "../../../source/modules/tc/payolution/src"
+    }
+  }
+}

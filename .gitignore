@@ -1,0 +1,13 @@
+.idea
+vendor
+.vagrant/machines
+/tmp
+/log
+/out/downloads
+/out/media
+/out/pictures
+/export
+cust.config.inc.php
+modules/Payolution_oxid_0.1.0_for_OXID_versions_4.5.X-4.6.X
+modules/Payolution_oxid_0.1.0_for_OXID_versions_4.5.X-4.6.X.zip
+.phpstorm-oxid.meta.php
