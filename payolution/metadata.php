@@ -19,7 +19,41 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '2.0';
+
+use OxidEsales\Eshop\Application\Controller\Admin\OrderAddress;
+use OxidEsales\Eshop\Application\Controller\Admin\OrderArticle;
+use OxidEsales\Eshop\Application\Controller\Admin\OrderMain;
+use OxidEsales\Eshop\Application\Controller\Admin\OrderOverview;
+use OxidEsales\Eshop\Application\Controller\OrderController;
+use OxidEsales\Eshop\Application\Model\CountryList;
+use OxidEsales\Eshop\Application\Model\PaymentGateway;
+use OxidEsales\Eshop\Application\Model\PaymentList;
+use OxidEsales\Eshop\Core\Email;
+use OxidEsales\Eshop\Core\ShopControl;
+use OxidEsales\Eshop\Core\ViewConfig;
+use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\DetailsController;
+use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\ListController;
+use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\MainController;
+use TopConcepts\Payolution\Module\Controller\Admin\ConfigController;
+use TopConcepts\Payolution\Module\Controller\Admin\ExpertController;
+use TopConcepts\Payolution\Module\Controller\Admin\InstallController;
+use TopConcepts\Payolution\Module\Controller\Admin\JsLibraryController;
+use TopConcepts\Payolution\Module\Controller\Admin\Order\OrderAddressController;
+use TopConcepts\Payolution\Module\Controller\Admin\Order\OrderArticleController;
+use TopConcepts\Payolution\Module\Controller\Admin\Order\OrdersController;
+use TopConcepts\Payolution\Module\Controller\Admin\Order\OverviewController;
+use TopConcepts\Payolution\Module\Controller\Admin\RegionalController;
+use TopConcepts\Payolution\Module\Controller\PdfDownloadController;
+use TopConcepts\Payolution\Module\Controller\ViewConfigController;
+use TopConcepts\Payolution\Module\Model\CountryListModel;
+use TopConcepts\Payolution\Module\Model\CountryModel;
+use TopConcepts\Payolution\Module\Model\OrderArticleModel;
+use TopConcepts\Payolution\Module\Model\OrderModel;
+use TopConcepts\Payolution\Module\Model\PaymentGatewayModel;
+use TopConcepts\Payolution\Module\Model\PaymentListModel;
+use TopConcepts\Payolution\Module\Model\PaymentModel;
+
+$sMetadataVersion = '2.1';
 
 /**
  * Module information
@@ -35,35 +69,34 @@ $aModule = [
     'email' => 'info@payolution.com',
     'controllers' => [
         // frontend controllers
-        'PayolutionPdfDownload' => \TopConcepts\Payolution\Module\Controller\PdfDownloadController::class,
+        'PayolutionPdfDownload' => PdfDownloadController::class,
         // admin controllers
-        'payolution_regional' => \TopConcepts\Payolution\Module\Controller\Admin\RegionalController::class,
-        'payolution_expert' => \TopConcepts\Payolution\Module\Controller\Admin\ExpertController::class,
-        'payolution_config' => \TopConcepts\Payolution\Module\Controller\Admin\ConfigController::class,
-        'payolution_orders' => \TopConcepts\Payolution\Module\Controller\Admin\Order\OrdersController::class,
-        'payolution_apilog' => \TopConcepts\Payolution\Module\Controller\Admin\ApiLog\MainController::class,
-        'payolution_apiloglist' => \TopConcepts\Payolution\Module\Controller\Admin\ApiLog\ListController::class,
-        'payolution_apilogdetails' => \TopConcepts\Payolution\Module\Controller\Admin\ApiLog\DetailsController::class,
-        'payolution_install' => \TopConcepts\Payolution\Module\Controller\Admin\InstallController::class,
-        'payolution_jslibrary' => \TopConcepts\Payolution\Module\Controller\Admin\JsLibraryController::class,
+        'payolution_regional' => RegionalController::class,
+        'payolution_expert' => ExpertController::class,
+        'payolution_config' => ConfigController::class,
+        'payolution_orders' => OrdersController::class,
+        'payolution_apilog' => MainController::class,
+        'payolution_apiloglist' => ListController::class,
+        'payolution_apilogdetails' => DetailsController::class,
+        'payolution_install' => InstallController::class,
+        'payolution_jslibrary' => JsLibraryController::class,
     ],
     'extend' => [
-        \OxidEsales\Eshop\Core\ViewConfig::class => \TopConcepts\Payolution\Module\Controller\ViewConfigController::class,
-        \OxidEsales\Eshop\Application\Model\Order::class => \TopConcepts\Payolution\Module\Model\OrderModel::class,
-        \OxidEsales\Eshop\Application\Controller\Admin\OrderOverview::class => \TopConcepts\Payolution\Module\Controller\Admin\Order\OverviewController::class,
-        \OxidEsales\Eshop\Application\Controller\Admin\OrderMain::class => \TopConcepts\Payolution\Module\Controller\Admin\Order\MainController::class,
-        \OxidEsales\Eshop\Application\Controller\Admin\OrderArticle::class => \TopConcepts\Payolution\Module\Controller\Admin\Order\OrderArticleController::class,
-        \OxidEsales\Eshop\Application\Model\CountryList::class => \TopConcepts\Payolution\Module\Model\CountryListModel::class,
-        \OxidEsales\Eshop\Application\Model\Country::class => \TopConcepts\Payolution\Module\Model\CountryModel::class,
-        \OxidEsales\Eshop\Application\Model\Order::class => \TopConcepts\Payolution\Module\Model\OrderModel::class,
-        \OxidEsales\Eshop\Application\Model\Payment::class => \TopConcepts\Payolution\Module\Model\PaymentModel::class,
-        \OxidEsales\Eshop\Application\Model\PaymentList::class => \TopConcepts\Payolution\Module\Model\PaymentListModel::class,
-        \OxidEsales\Eshop\Application\Model\PaymentGateway::class => \TopConcepts\Payolution\Module\Model\PaymentGatewayModel::class,
-        \OxidEsales\Eshop\Application\Model\OrderArticle::class => \TopConcepts\Payolution\Module\Model\OrderArticleModel::class,
-        \OxidEsales\Eshop\Application\Controller\Admin\OrderAddress::class => \TopConcepts\Payolution\Module\Controller\Admin\Order\OrderAddressController::class,
-        \OxidEsales\Eshop\Core\Email::class => \TopConcepts\Payolution\Module\Core\Email::class,
-        \OxidEsales\Eshop\Core\ShopControl::class => \TopConcepts\Payolution\Module\Core\ShopControl::class,
-        \OxidEsales\Eshop\Application\Controller\OrderController::class => \TopConcepts\Payolution\Module\Controller\OrderController::class,
+        ViewConfig::class => ViewConfigController::class,
+        OrderOverview::class => OverviewController::class,
+        OrderMain::class => \TopConcepts\Payolution\Module\Controller\Admin\Order\MainController::class,
+        OrderArticle::class => OrderArticleController::class,
+        CountryList::class => CountryListModel::class,
+        \OxidEsales\Eshop\Application\Model\Country::class => CountryModel::class,
+        \OxidEsales\Eshop\Application\Model\Order::class => OrderModel::class,
+        \OxidEsales\Eshop\Application\Model\Payment::class => PaymentModel::class,
+        PaymentList::class => PaymentListModel::class,
+        PaymentGateway::class => PaymentGatewayModel::class,
+        \OxidEsales\Eshop\Application\Model\OrderArticle::class => OrderArticleModel::class,
+        OrderAddress::class => OrderAddressController::class,
+        Email::class => \TopConcepts\Payolution\Module\Core\Email::class,
+        ShopControl::class => \TopConcepts\Payolution\Module\Core\ShopControl::class,
+        OrderController::class => \TopConcepts\Payolution\Module\Controller\OrderController::class,
     ],
     'templates' => [
         // backend tpl
