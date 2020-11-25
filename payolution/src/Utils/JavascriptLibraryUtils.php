@@ -18,6 +18,7 @@ namespace TopConcepts\Payolution\Utils;
 
 use OxidEsales\Eshop\Core\Registry;
 use TopConcepts\Payolution\AccessPoint;
+use TopConcepts\Payolution\Core\PayolutionUtils;
 use TopConcepts\Payolution\Module\Core\Exception\PayolutionException;
 use TopConcepts\Payolution\PayolutionModule;
 
@@ -456,7 +457,7 @@ class JavascriptLibraryUtils
             // Save detailed error log
             /** @var PayolutionException $oEx */
             $oEx = oxNew(PayolutionException::class, $e->getMessage());
-            $oEx->debugOut();
+            PayolutionUtils::logException($oEx);
 
             // Remove unnecessary files
             $this->removeDownloadedFile();
