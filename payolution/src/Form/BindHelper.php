@@ -35,6 +35,15 @@ class BindHelper
 
         return $activeView ? $activeView->getViewConfig()->isActiveThemeFlow() : false;
     }
+    /**
+     * @return bool
+     */
+    private function isActiveThemeWave()
+    {
+        $activeView = Registry::getConfig()->getActiveView();
+
+        return $activeView ? $activeView->getViewConfig()->isActiveThemeWave() : false;
+    }
 
     /**
      * @param User $user
@@ -45,7 +54,7 @@ class BindHelper
     {
         $hasValue = $user->oxuser__oxbirthdate->value && $user->oxuser__oxbirthdate->value != '0000-00-00';
         $format = '%Y-%m-%d';
-        if ($this->isActiveThemeFlow()) {
+        if ($this->isActiveThemeFlow() || $this->isActiveThemeWave()) {
             $format = '%d.%m.%Y';
         }
 
@@ -59,7 +68,7 @@ class BindHelper
     public function formatBirthday($value)
     {
         $format = '%Y-%m-%d';
-        if ($this->isActiveThemeFlow()) {
+        if ($this->isActiveThemeFlow() || $this->isActiveThemeWave()) {
             $format = '%d.%m.%Y';
         }
 

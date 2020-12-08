@@ -23,6 +23,21 @@
             <div class="text">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_TAB_BANK}]</div>
         </li>
     </ol>
+    [{elseif $oViewConf->isActiveThemeWave()}]
+    <ul id="payo-installment-tabs" class="checkoutSteps clear">
+        <li class="step1 active" id="payo-tab-personalInfo" data-tab="personalInfo">
+            <div class="num">1</div>
+            <div class="text">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_TAB_PERSONAL_INFO}]</div>
+        </li>
+        <li class="step2" id="payo-tab-installmentPeriod" data-tab="installmentPeriod">
+            <div class="num">2</div>
+            <div class="text">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_TAB_PERIOD}]</div>
+        </li>
+        <li class="step3 defaultLast" id="payo-tab-bankInfo" data-tab="bankInfo">
+            <div class="num">3</div>
+            <div class="text">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_TAB_BANK}]</div>
+        </li>
+    </ul>
     [{else}]
     <ul id="payo-installment-tabs" class="checkoutSteps clear">
         <li class="step1 active" id="payo-tab-personalInfo" data-tab="personalInfo">
@@ -44,7 +59,7 @@
         <ul class="form payolutionUserDetails payolution_usertext_[{$sPaymentID}]">
             [{include file="inc/select_payment_element.tpl" element=$form->getElement('dynvalue[payolution_installment_birthday]')}]
         </ul>
-        [{if $oViewConf->isActiveThemeFlow()}]
+        [{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}]
             <button id="payo-button-toInstallmentPeriod" type="button" class="btn btn-primary submitButton largeButton">
                 [{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_BUTTON_TO_INSTALLMENT}]
                 <i class="fa fa-caret-right"></i>
@@ -105,7 +120,7 @@
             [{include file="inc/select_payment_element.tpl" element=$form->getElement('dynvalue[payolution_installment_privacy]')}]
         </ul>
         [{if $paymentContext->isCountryViable()}]
-        [{if $oViewConf->isActiveThemeFlow()}]
+        [{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}]
         <button id="payo-button-toBankInfo" type="button" class="btn btn-primary submitButton largeButton">
             [{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_BUTTON_TO_BANKINFO}]
             <i class="fa fa-caret-right"></i>

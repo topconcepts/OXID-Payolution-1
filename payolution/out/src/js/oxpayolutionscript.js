@@ -137,7 +137,7 @@ payolution_jQuery(function($){
 
                 });
 
-                $('.payoliution-flow-error-symbol').css('height', $('.payoliution-flow-error-text').css('height'));
+                $('.payolution-flow-error-symbol').css('height', $('.payolution-flow-error-text').css('height'));
 
             },
 

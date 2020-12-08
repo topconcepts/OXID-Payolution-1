@@ -186,6 +186,15 @@ class ViewConfigController extends ViewConfigController_Parent
                : false;
     }
     /**
+     * @return bool
+     */
+    public function isActiveThemeWave()
+    {
+        return method_exists($this, 'getActiveTheme')
+            ? $this->getActiveTheme() == 'wave'
+            : false;
+    }
+    /**
      * @return string
      */
     public function getActiveCountryIso()

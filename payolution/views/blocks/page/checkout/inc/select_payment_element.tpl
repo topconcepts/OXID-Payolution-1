@@ -1,4 +1,4 @@
-[{if $oViewConf->isActiveThemeFlow()}]
+[{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}]
     [{include file="inc/select_payment_element_flow.tpl" element=$element}]
 [{else}]
 <li class="payolution-select-payment-element [{if $element->required()}]required-field[{/if}] payolution-[{$element->type()}]-margin ">

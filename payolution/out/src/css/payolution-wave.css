@@ -1,3 +1,148 @@
+.payolutionUserDetails {
+    list-style-type: none;
+}
+
+.payolutionUserDetails.form label {
+    line-height: inherit;
+}
+
+.payolutionUserDetails.form label {
+    line-height: 16px;
+}
+
+#payo-panel-bankInfo .payolutionUserDetails.form label {
+    display: block;
+}
+
+.form-control.payolution-form-birthday-input {
+    float: inherit;
+}
+
+@media (max-width: 767px) {
+    .form-control.payolution-form-birthday-input {
+        width: 100%;
+    }
+}
+
+.content .payoOldPrice.oldPrice {
+    font-size: 12px;
+}
+
+.product-box .actions {
+    bottom: auto;
+}
+
+.details-info .payoOldPrice.oldPrice {
+    font-size: 14px;
+}
+
+.payoReadMore.readMore {
+    font-size: 13px;
+    color: #009ec0;
+}
+
+/* Checkout */
+#payo-installment-tabs {
+    height: 29px;
+    margin-top: 15px;
+}
+
+#payo-installment-tabs > li {
+    width: 33%;
+}
+
+body.cl-thankyou ul.checkoutSteps li,
+body.is-checkout ul.checkoutSteps li {
+    width: 20%;
+    display: block;
+    padding-top: 16px;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+body.cl-thankyou ul.checkoutSteps,
+body.is-checkout ul.checkoutSteps {
+    border-top: 3px solid #009EC0;
+    width: 100%;
+    height: 40px;
+    display: block;
+    padding: 0;
+    margin: 11px 0 0 0;
+}
+
+body.cl-thankyou ul.checkoutSteps li.active .num,
+body.is-checkout ul.checkoutSteps li.active .num {
+    background-color: #FC6621;
+    color: #FFF;
+}
+
+body.cl-thankyou ul.checkoutSteps li.passed .num,
+body.is-checkout ul.checkoutSteps li.passed .num {
+    background-color: #5cb85c;
+    color: #FFF;
+}
+
+body.cl-thankyou ul.checkoutSteps li .num,
+body.is-checkout ul.checkoutSteps li .num {
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    background-color: #009EC0;
+    width: 30px;
+    height: 30px;
+    padding-top: 1px;
+    margin-left: -16px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#payoPrivacyPolicy .payoLongCheckText {
+    word-break: break-word;
+    padding: 0px 16px;
+}
+
+#payoPrivacyPolicy .payolution-select-payment-element.required-field.payolution-checkbox-margin  {
+    position: relative;
+}
+
+#payoPrivacyPolicy .payolution-select-payment-element.required-field.payolution-checkbox-margin input {
+    position: absolute;
+    top: 0;
+}
+
+.payolution-select-payment-element.required-field.payolution-input-margin:last-child {
+    margin-left: 40px;
+}
+@media (max-width: 767px) {
+    .payolution-select-payment-element.required-field.payolution-input-margin:last-child {
+        margin-left: 0px;
+    }
+
+    body.cl-thankyou ul.checkoutSteps .text,
+    body.is-checkout ul.checkoutSteps .text {
+        display: none;
+    }
+}
+
+#payo-panel-personalInfo h3,
+#payo-panel-installmentPeriod h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.payolution-flow-form-container ul{
+    padding-left: 0px;
+}
+
+.payoLongCheckText {
+    padding: 0px 16px;
+}
+
 .payolution-flow-error-container {
     padding: 0!important;
 }
@@ -248,4 +393,24 @@
 
 .flow-error {
     margin-bottom: 20px;
+}
+
+.payolution-flow-form-container ul {
+    padding-left: 0px;
+}
+
+.payolution-flow-form-container {
+    display: none;
+}
+
+.payolution-flow-form-container.activePayment {
+    display: block;
+}
+
+.form-horizontal .form-group {
+    align-items: center;
+}
+
+.form-group .req.control-label {
+    margin-bottom: 0;
 }

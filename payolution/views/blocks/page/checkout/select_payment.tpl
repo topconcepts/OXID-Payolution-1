@@ -19,11 +19,14 @@
 [{if $oViewConf->isActiveThemeFlow()}]
     [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-flow.css") priority=10}]
 [{/if}]
+[{if $oViewConf->isActiveThemeWave()}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-wave.css") priority=10}]
+[{/if}]
 [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui.min.css") priority=11}]
 [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui-slider-pips.css") priority=11}]
 [{oxscript add="var oxGlobalPayolutionPnoSsnEncoding = '';"}]
 [{oxscript add='payolution_jQuery(function($){$("form.js-oxValidate, form.oxValidate").oxPayolutionInputValidator();});'}]
-[{if $oViewConf->isActiveThemeFlow()}]
+[{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}]
     [{assign var="containerElement" value="div"}]
     [{assign var="paymentTag" value="div"}]
 [{else}]
@@ -40,12 +43,12 @@
 [{assign var="base64cmp" value=$config->getBase64EncodedCompanyName()}]
 <input type="hidden" id="base64cmp" value="[{$base64cmp}]"/>
 [{if $sPaymentID == "payolution_invoice_b2c" || $sPaymentID == "payolution_invoice_b2b" || $sPaymentID == "payolution_installment" || $sPaymentID == "payolution_dd"}]
-    <dl [{if $oViewConf->isActiveThemeFlow()}] class="payolution-select-payment-form"[{/if}]>
+    <dl [{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}] class="payolution-select-payment-form"[{/if}]>
         <dt>
             <input id="payment_[{$sPaymentID}]" type="radio" name="paymentid" value="[{$sPaymentID}]" [{if $oView->getCheckedPaymentId() == $paymentmethod->oxpayments__oxid->value}]checked[{/if}]>
             <label for="payment_[{$sPaymentID}]"><b>[{ $paymentmethod->oxpayments__oxdesc->value}]</b></label>
         </dt>
-        <dd class="payoliution-flow-form-container [{if $oView->getCheckedPaymentId() == $paymentmethod->oxpayments__oxid->value}]activePayment[{/if}]">
+        <dd class="payolution-flow-form-container [{if $oView->getCheckedPaymentId() == $paymentmethod->oxpayments__oxid->value}]activePayment[{/if}]">
             <[{$paymentTag}] [{if $sPaymentID != "payolution_installment"}] class="form payolutionUserDetails payolution_usertext_[{ $sPaymentID }]"[{/if}] style="display: inline-block">
             [{assign var="module" value=$oViewConf->getPayolutionModule()}]
             [{if $oViewConf->getPaymentPrice($paymentmethod)}]

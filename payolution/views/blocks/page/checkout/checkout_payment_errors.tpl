@@ -1,5 +1,5 @@
 [{$smarty.block.parent}]
-[{if $oViewConf->isActiveThemeFlow()}]
+[{if $oViewConf->isActiveThemeFlow() || $oViewConf->isActiveThemeWave()}]
     [{assign var="flowErrorClass" value='flow-error' }]
 [{else}]
     [{assign var="flowErrorClass" value='' }]
