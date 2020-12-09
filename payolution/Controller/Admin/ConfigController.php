@@ -219,7 +219,9 @@ class ConfigController extends ShopConfiguration
         $myConfig = $this->getConfig();
         $sShopId = $this->getEditObjectId();
         $sModule = $this->_getModuleForConfigVars();
-
+        if(empty($sModule)) {
+            $sModule = 'module:payolution';
+        }
         foreach ($aConfVars as $sName => $sValue) {
             if (in_array($sName, $aKeys)) {
                 $sCheckValue = $this->replaceLocationString($sValue);
