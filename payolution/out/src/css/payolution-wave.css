@@ -414,3 +414,10 @@ body.is-checkout ul.checkoutSteps li .num {
 .form-group .req.control-label {
     margin-bottom: 0;
 }
+/* JAVASCRIPT FIX POPUP*/
+.ui-dialog {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translateX(-50%) translateY(-50%) !important;
+    position: fixed;
+}
