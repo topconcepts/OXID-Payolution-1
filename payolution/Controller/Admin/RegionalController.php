@@ -73,6 +73,9 @@ class RegionalController extends ShopConfiguration
         $myConfig = $this->getConfig();
         $sShopId = $this->getEditObjectId();
         $sModule = $this->_getModuleForConfigVars();
+        if(empty($sModule)) {
+            $sModule = 'module:payolution';
+        }
         $request = Registry::get(Request::class);
         foreach ($this->_aConfParams as $sType => $sParam) {
             $aConfVars = $request->getRequestParameter($sParam);
