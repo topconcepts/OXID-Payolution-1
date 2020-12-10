@@ -297,4 +297,9 @@ class ConfigController extends ShopConfiguration
             ];
         }
     }
+
+    protected function _getModuleForConfigVars()
+    {
+        return 'module:payolution';
+    }
 }
