@@ -28,7 +28,7 @@ $aLang = array(
     'PAYOLUTION_HOLDER_DD'                                       => 'Kontoinhaber',
     'PAYOLUTION_IBAN_DD'                                         => 'IBAN',
     'PAYOLUTION_BIC_DD'                                          => 'BIC',
-    'PAYOLUTION_MANDATE_DD'                                      => 'Hiermit erteile ich der net-m-Privatbank ein <span id="mandatePdfDd" class="pdfLink">SEPA-Lastschriftmandat</span>',
+    'PAYOLUTION_MANDATE_DD'                                      => 'Hiermit erteile ich der Bank Frick ein <span id="mandatePdfDd" class="pdfLink">SEPA-Lastschriftmandat</span>',
     'PAYOLUTION_ACCOUNT_HOLDER'                                  => 'Kontoinhaber:',
     'PAYOLUTION_BIC'                                             => 'BIC:',
     'PAYOLUTION_BIRTHDAY'                                        => 'Geburtsdatum:',
