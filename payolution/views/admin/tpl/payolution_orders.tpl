@@ -3,7 +3,7 @@
 [{assign var="sjQuery" value=$oViewConf->getPayolutionModuleUrl('out/src/js/libs/jquery.min.js')}]
 [{assign var="sJsControl" value=$oViewConf->getPayolutionModuleUrl('out/src/js/payo-admin-order.js')}]
 [{assign var="payoAdminCss" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/css/payolution_admin.css')}]
-[{assign var="payoLogo" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/images/payolution-logo.png')}]
+[{assign var="payoLogo" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/images/unzer-logo.png')}]
 [{assign var="historyLogo" value=$oViewConf->getPayolutionModuleUrl('out/admin/src/images/history.png')}]
 
 <link rel="stylesheet" type="text/css" href="[{$payoAdminCss}]"/>

@@ -48,7 +48,7 @@ class ViewConfigController extends ViewConfigController_Parent
      *
      * @var string
      */
-    protected $_sDownloadLinkBase = 'http://www.topconcepts.de/files/downloads/';
+    protected $_sDownloadLinkBase = 'https://www.cgrd.de/files/customer/payolution/';
 
     /**
      * Return Payolution countries list

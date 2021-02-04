@@ -99,7 +99,7 @@ div.main-container a {
 
 .payolution-blue-button {
     display: block;
-    background-color: rgb(38, 82, 128) !important;
+    background-color: #fc1154 !important;
     color: #FFF;
     line-height: 40px;
     text-transform: uppercase;
@@ -192,7 +192,7 @@ h1.payolution {
 
 div.payolution-intro .payolution-logo {
     display: table-cell;
-    background: url('../images/payolution-logo.png') no-repeat center;
+    background: url('../images/unzer-logo.png') no-repeat center;
     width: 345px;
 }
 
@@ -221,7 +221,7 @@ table.payolution-contacts {
 }
 
 table.payolution-contacts th {
-    background-color: rgb(38, 82, 128);
+    background-color: #fc1154;
     height: 5px;
 }
 
@@ -310,7 +310,7 @@ div.payolution-download .payolution-button-container {
 
 div.payolution-download a.payolution-download-button {
     display: block;
-    background-color: rgb(38, 82, 128);
+    background-color: #fc1154;
     color: #FFFFFF;
     line-height: 40px;
     text-transform: uppercase;
@@ -392,7 +392,7 @@ div.payolution-country-row .row {
 }
 
 div.payolution-country-row .row.row-open {
-    background-color: rgb(38, 82, 128);
+    background-color: #fc1154;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -421,7 +421,7 @@ div.payolution-country-row .sign.minus {
 div.payolution-country-row .text {
     float: left;
     font-size: 20px;
-    color: rgb(38, 82, 128);
+    color: #fc1154;
 }
 
 div.payolution-country-row .row.row-open .text {
@@ -430,7 +430,7 @@ div.payolution-country-row .row.row-open .text {
 
 .payo-config-title {
     font-size: 20px;
-    color: rgb(38, 82, 128);
+    color: #fc1154;
 }
 
 div.payolution-country-row .text.inactive {
@@ -660,7 +660,7 @@ input.payo-field {
     width: 20px;
     height: 22px;
     float: left;
-    background: url('../images/payolution-logo-small.png') no-repeat center;
+    background: url('../images/unzer-logo-small.png') no-repeat center;
 }
 
 .payo-server-config-title-block {
