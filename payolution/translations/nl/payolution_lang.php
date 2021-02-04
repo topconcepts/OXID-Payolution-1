@@ -88,7 +88,7 @@ $aLang = array(
     'PAYOLUTION_PRIVACY_POLICY_B2C' => 'Ik aanvaard de overdracht van de benodigde gegevens voor de afwikkeling van de aankoop op factuur en een controle van mijn identiteit en kredietwaardigheid. Deze <span id="privacyPdfb2c" class="pdfLink">inwilliging</span> kan ik op elk gewenst moment met onmiddellijke ingang herroepen.',
     'PAYOLUTION_PRIVACY_POLICY_B2B' => 'Ik aanvaard de overdracht van de benodigde gegevens voor de afwikkeling van de aankoop op factuur en een controle van mijn identiteit en kredietwaardigheid. Deze <span id="privacyPdfb2b" class="pdfLink">inwilliging</span> kan ik op elk gewenst moment met onmiddellijke ingang herroepen.',
     'PAYOLUTION_PRIVACY_POLICY_DD' => 'Ik aanvaard de overdracht van de benodigde gegevens voor de afwikkeling van de aankoop op automatische incasso en een controle van mijn identiteit en kredietwaardigheid. Deze <span id="privacyPdfDd" class="pdfLink">inwilliging</span> kan ik op elk gewenst moment met onmiddellijke ingang herroepen.',
-    'PAYOLUTION_MANDATE_DD' => 'Hiermee geef ik de net-m Privatbank een <span id="mandatePdfDd" class="pdfLink">SEPA-machtiging</span>',
+    'PAYOLUTION_MANDATE_DD' => 'Hiermee geef ik de Bank Frick een <span id="mandatePdfDd" class="pdfLink">SEPA-machtiging</span>',
     'PAYOLUTION_PHONE' => 'Telefoon',
     'PAYOLUTION_IBAN_DD' => 'IBAN',
     'PAYOLUTION_BIC_DD' => 'BIC',

@@ -29,7 +29,7 @@ $aLang = array(
     'PAYOLUTION_HOLDER_DD'                                       => 'Holder',
     'PAYOLUTION_IBAN_DD'                                         => 'IBAN',
     'PAYOLUTION_BIC_DD'                                          => 'BIC',
-    'PAYOLUTION_MANDATE_DD'                                      => 'I authorize the net-m private bank a <span id="mandatePdfDd" class="pdfLink">SEPA direct debit mandate</span>',
+    'PAYOLUTION_MANDATE_DD'                                      => 'I authorize the Bank Frick a <span id="mandatePdfDd" class="pdfLink">SEPA direct debit mandate</span>',
     'PAYOLUTION_ACCOUNT_HOLDER'                                  => 'Account holder:',
     'PAYOLUTION_BIC'                                             => 'BIC:',
     'PAYOLUTION_BIRTHDAY'                                        => 'Birthday:',
