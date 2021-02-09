@@ -65,8 +65,8 @@ $aModule = [
     'version' => '1.5.0',
     'author' => 'Payolution',
     'thumbnail' => 'logo.png',
-    'url' => 'http://www.payolution.com',
-    'email' => 'info@payolution.com',
+    'url' => 'https://www.unzer.com/de/unzer-payments/',
+    'email' => 'integration-vie@unzer.com',
     'controllers' => [
         // frontend controllers
         'PayolutionPdfDownload' => PdfDownloadController::class,
