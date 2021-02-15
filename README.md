@@ -26,6 +26,11 @@ sales@payolution.com
 -- Description
 Payolution Module for OXID version >= 6.0.1
 
+-- Documentation
+Can be found in the folder /manual or can be downloaded here:
+German: https://www.cgrd.de/customer/payolution/payolution-for-oxid-de-1.5.0.pdf
+English: https://www.cgrd.de/customer/payolution/payolution-for-oxid-en-1.5.0.pdf
+
 
 -- Installation
 
