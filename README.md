@@ -27,7 +27,7 @@ https://www.unzer.com/de/unzer-payments/
 
 -- Mail
 
-sales.paylater@paysafe.com
+sales@unzer.com
 
 -- Support
 
