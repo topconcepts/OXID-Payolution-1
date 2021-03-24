@@ -153,11 +153,11 @@ class PayolutionOrder
             $basket = $this->transformUtils->convertOxidOrderToOxidBasket($this->_oxidOrder);
 
             $this->_orderingContext = $this->manager->createOrderingContext(
-              $this->_oxidOrder->getUser(),
-              $this->ipAddress(),
-              $basket,
-              $payment,
-              $paymentOptions
+                $this->_oxidOrder->getUser(),
+                $this->ipAddress(),
+                $basket,
+                $payment,
+                $paymentOptions
             );
         }
 
@@ -178,7 +178,7 @@ class PayolutionOrder
     public function setStatus(OrderStatus $status)
     {
         $this->_oxidOrder->oxorder__payo_status = new Field($status->name(),
-          Field::T_TEXT);
+            Field::T_TEXT);
         $this->_oxidOrder->save();
     }
 
@@ -499,7 +499,7 @@ class PayolutionOrder
 
         return Registry::getLang()->formatCurrency($price, $cur);
     }
-    
+
     /**
      * Get available refund amount
      *
@@ -564,8 +564,8 @@ class PayolutionOrder
     {
         $db = Db::getDb(Db::FETCH_MODE_ASSOC);
 
-        $sql = 'INSERT INTO `payo_ordershipments` (`oxid`, `item_id`, `amount`) 
-                VALUES (?, ?, ?) ON DUPLICATE KEY 
+        $sql = 'INSERT INTO `payo_ordershipments` (`oxid`, `oxshopid`, `item_id`, `amount`) 
+                VALUES (?, ?, ?, ?) ON DUPLICATE KEY 
                 UPDATE `oxid` = ?, `item_id` = ?, `amount` = LEAST(?, `amount` + ?)';
 
         foreach ($items as $key => $amount) {
@@ -573,6 +573,7 @@ class PayolutionOrder
 
             $db->execute($sql, [
                 $this->getId(),
+                Registry::getConfig()->getActiveShop()->getId(),
                 $key,
                 $amount,
                 $this->getId(),
@@ -612,10 +613,10 @@ class PayolutionOrder
      */
     public function updateDbOnFullShip()
     {
-        $db = Db::getDb(Db::FETCH_MODE_ASSOC);
+        $db = DatabaseProvider::getDb(Db::FETCH_MODE_ASSOC);
 
-        $sql = 'INSERT INTO `payo_ordershipments` (`oxid`, `item_id`, `amount`) 
-                VALUES (?, ?, ?) ON DUPLICATE KEY 
+        $sql = 'INSERT INTO `payo_ordershipments` (`oxid`, `oxshopid`, `item_id`, `amount`) 
+                VALUES (?, ?, ?, ?) ON DUPLICATE KEY 
                 UPDATE `oxid` = ?, `item_id` = ?, `amount` = LEAST(?, `amount` + ?)';
 
         $orderArticles = $this->orderingContext()->basket()->items();
@@ -626,15 +627,16 @@ class PayolutionOrder
             foreach ($orderArticles as $article) {
                 $key = $article->articleId;
                 $params = [
-                  $this->getId(),
-                  $key,
-                  $article->amount,
-                  $this->getId(),
-                  $key,
-                  $article->amount,
-                  isset($shippedItems[$key])
-                      ? bcsub($article->amount, $shippedItems[$key])
-                      : $article->amount
+                    $this->getId(),
+                    Registry::getConfig()->getActiveShop()->getId(),
+                    $key,
+                    $article->amount,
+                    $this->getId(),
+                    $key,
+                    $article->amount,
+                    isset($shippedItems[$key])
+                        ? bcsub($article->amount, $shippedItems[$key])
+                        : $article->amount
                 ];
 
                 $db->execute($sql, $params);

@@ -41,11 +41,13 @@ class OrderLogger
     public function logStatusChange(OrderStatus $status, PayolutionOrder $order, $values = [])
     {
         HistoryModel::create()
-          ->setOrderId($order->getId())
-          ->setStatus($status->name())
-          ->setHistoryValues($values)
-          ->setAddedAt(date('Y-m-d H:i:s', Registry::get(UtilsDate::class)->getTime()))
-          ->save();
+            ->setOrderId($order->getId())
+            ->setOxShopId(Registry::getConfig()->getActiveShop()->getId())
+            ->setHistoryValues($values)
+            ->setStatus($status->name())
+            ->setHistoryValues($values)
+            ->setAddedAt(date('Y-m-d H:i:s', Registry::get(UtilsDate::class)->getTime()))
+            ->save();
     }
 
 

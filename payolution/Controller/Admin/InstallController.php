@@ -95,27 +95,27 @@ class InstallController extends ToolsList
     private function setPaymentOptions()
     {
         $this->paymentOptions = implode('__@@', [
-          'payolution_installment_birthday',
-          'payolution_installment_privacy',
-          'payolution_installment_iban',
-          'payolution_installment_account_holder',
-          'payolution_installment_period',
-          'payolution_b2c_privacy',
-          'payolution_b2c_birthday',
-          'payolution_b2c_phone',
-          'payolution_b2b_ust_id',
-          'payolution_b2b_privacy',
-          'payolution_b2b_type',
-          'payolution_b2b_owner_given',
-          'payolution_b2b_owner_family',
-          'payolution_b2b_owner_birthday',
-          'payolution_b2b_phone',
-          'payolution_dd_birthday',
-          'payolution_dd_privacy',
-          'payolution_dd_holder',
-          'payolution_dd_iban',
-          'payolution_dd_mandate',
-        ]).'__@@';
+                'payolution_installment_birthday',
+                'payolution_installment_privacy',
+                'payolution_installment_iban',
+                'payolution_installment_account_holder',
+                'payolution_installment_period',
+                'payolution_b2c_privacy',
+                'payolution_b2c_birthday',
+                'payolution_b2c_phone',
+                'payolution_b2b_ust_id',
+                'payolution_b2b_privacy',
+                'payolution_b2b_type',
+                'payolution_b2b_owner_given',
+                'payolution_b2b_owner_family',
+                'payolution_b2b_owner_birthday',
+                'payolution_b2b_phone',
+                'payolution_dd_birthday',
+                'payolution_dd_privacy',
+                'payolution_dd_holder',
+                'payolution_dd_iban',
+                'payolution_dd_mandate',
+            ]).'__@@';
     }
 
     /**
@@ -274,7 +274,7 @@ class InstallController extends ToolsList
         // check for configuration settings in current shop
         if (!$db->getOne(
             "SELECT oxid FROM oxconfig WHERE oxvarname = 'aPayolutionLanguage' AND oxshopid = ?",
-            [Registry::getConfig()->getShopId()]
+            [Registry::getConfig()->getActiveShop()->getId()]
         ))
         {
             return false;
