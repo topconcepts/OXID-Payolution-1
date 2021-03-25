@@ -613,7 +613,7 @@ class PayolutionOrder
      */
     public function updateDbOnFullShip()
     {
-        $db = DatabaseProvider::getDb(Db::FETCH_MODE_ASSOC);
+        $db = Db::getDb(Db::FETCH_MODE_ASSOC);
 
         $sql = 'INSERT INTO `payo_ordershipments` (`oxid`, `oxshopid`, `item_id`, `amount`) 
                 VALUES (?, ?, ?, ?) ON DUPLICATE KEY 
