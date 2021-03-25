@@ -23,13 +23,14 @@
     [{oxscript include=$oViewConf->getPayolutionModuleUrl("out/src/js/payoPaymentInstallment.js") priority=13}]
     [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution.css") priority=10}]
     [{if $oViewConf->isActiveThemeFlow()}]
-        [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-flow.css") priority=10}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-flow.css") priority=10}]
     [{/if}]
     [{if $oViewConf->isActiveThemeWave()}]
-        [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-wave.css") priority=10}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-wave.css") priority=10}]
     [{/if}]
     [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui.min.css") priority=11}]
     [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui-slider-pips.css") priority=11}]
+    <input type="hidden" id="payo-translation-due" value="[{oxmultilang ident='PAYOLUTION_DUE'}]"/>
     <a href="javascript:void(0)" id="payo-toggler-show" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_SHOW_DETAILS}]</a>
     <a href="javascript:void(0)" id="payo-toggler-hide" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_HIDE_DETAILS}]</a>
     <div id="payo-order-installment-details">

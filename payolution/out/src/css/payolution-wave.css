@@ -275,7 +275,7 @@ body.is-checkout ul.checkoutSteps li .num {
 }
 
 .payo-installment-wrapper-right {
-    width: 275px;
+    width: auto;
 }
 
 #payo-panel-bankInfo .payolutionUserDetails.form label {
