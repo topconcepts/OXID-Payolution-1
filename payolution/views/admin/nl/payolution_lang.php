@@ -39,4 +39,5 @@ $aLang = array(
     'PAYOLUTION_PDF_FOOTER_TOTAL_DEBT_2' => 'met vermelding van het gebriuksdoeleinde.',
     'PAYOLUTION_PDF_FOOTER_RECEIVER' => 'Ontvanger: ',
     'PAYOLUTION_PDF_FOOTER_TOTAL_SUM' => 'Totaalbedrag: ',
+    'PAYOLUTION_CONTACT_LOCATION_CH_EMAIL' => 'sales@unzer.com',
 );

@@ -14,11 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace OxidEsales\EshopCommunity\Migrations;
+namespace TopConcepts\Payolution\Module\Migrations;
 
-use Doctrine\DBAL\Migrations\AbstractMigration;
+use Doctrine\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
-use OxidEsales\Eshop\Core\Registry;
 
 /**
  * Auto-generated Migration: Please modify to your needs!
@@ -31,26 +30,22 @@ class Version20180304170739 extends AbstractMigration
     public function up(Schema $schema)
     {
         $this->addSql("
-            DROP TABLE IF EXISTS `payo_logs`;
-            CREATE TABLE `payo_logs` (
-              `OXID` char(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+            CREATE TABLE IF NOT EXISTS `payo_logs` (
+              `OXID`     char(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+              `OXSHOPID` CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
               `ADDED_AT` datetime DEFAULT NULL,
               `ORDER_ID` char(32) DEFAULT '',
               `ORDER_NO` varchar(250) DEFAULT NULL,
-              `REQUEST` text NOT NULL,
+              `REQUEST`  text NOT NULL,
               `RESPONSE` text
             ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Log if Payolution API requests';
         ");
 
         $this->addSql("
-            DROP TABLE IF EXISTS `payo_history`;
-            CREATE TABLE `payo_history` (
-              `OXID`           CHAR(32)
-                               CHARACTER SET latin1
-                               COLLATE latin1_general_ci NOT NULL DEFAULT '',
-              `ORDER_ID`       CHAR(32)
-                               CHARACTER SET latin1
-                               COLLATE latin1_general_ci NOT NULL DEFAULT '',
+            CREATE TABLE IF NOT EXISTS `payo_history` (
+              `OXID`           CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+              `OXSHOPID`       CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+              `ORDER_ID`       CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
               `STATUS`         CHAR(15)                  NOT NULL,
               `HISTORY_VALUES` TEXT,
               `ADDED_AT`       DATETIME                  NOT NULL,
@@ -63,12 +58,9 @@ class Version20180304170739 extends AbstractMigration
 
         $this->addSql("
             CREATE TABLE IF NOT EXISTS `payo_returnamount` (
-              `OXID`        CHAR(32)
-                            CHARACTER SET latin1
-                            COLLATE latin1_general_ci NOT NULL,
-              `POINVOICEID` CHAR(32)
-                            CHARACTER SET latin1
-                            COLLATE latin1_general_ci NOT NULL DEFAULT '',
+              `OXID`        CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+              `OXSHOPID` CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+              `POINVOICEID` CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
               `POAMOUNT`    DOUBLE                    NOT NULL DEFAULT '0',
               `PODATE`      DATETIME                  NOT NULL DEFAULT '0000-00-00 00:00:00',
               PRIMARY KEY (`OXID`),
@@ -81,6 +73,7 @@ class Version20180304170739 extends AbstractMigration
         $this->addSql("
            CREATE TABLE IF NOT EXISTS `payo_ordershipments` (
               `oxid` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+              `oxshopid` CHAR(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
               `item_id` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
               `amount` float DEFAULT NULL,
               PRIMARY KEY (`oxid`,`item_id`)
@@ -114,7 +107,7 @@ class Version20180304170739 extends AbstractMigration
         $config = \OxidEsales\Eshop\Core\Registry::getConfig();
         $this->addSql('
             REPLACE INTO oxconfig (OXID, OXSHOPID, OXMODULE, OXVARNAME, OXVARTYPE, OXVARVALUE)
-            VALUES (\'a54a3a3800bdd392b59109280c472d10\',"' . $config->getShopId() . '",\'\',\'aPayolutionLanguage\',\'aarr\',ENCODE(\'a:7:{s:2:"DA";s:2:"27";s:2:"DE";s:2:"28";s:2:"EN";s:2:"31";s:2:"FI";s:2:"37";s:2:"NB";s:2:"97";s:2:"NL";s:3:"101";s:2:"SV";s:3:"138";}\', "' . $config->getConfigParam('sConfigKey') . '"));
+            VALUES (\'a54a3a3800bdd392b59109280c472d10\',"' . $config->getActiveShop()->getId() . '",\'\',\'aPayolutionLanguage\',\'aarr\',ENCODE(\'a:7:{s:2:"DA";s:2:"27";s:2:"DE";s:2:"28";s:2:"EN";s:2:"31";s:2:"FI";s:2:"37";s:2:"NB";s:2:"97";s:2:"NL";s:3:"101";s:2:"SV";s:3:"138";}\', "' . $config->getConfigParam('sConfigKey') . '"));
         ');
     }
 }
