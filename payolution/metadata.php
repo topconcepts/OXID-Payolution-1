@@ -35,7 +35,6 @@ use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\DetailsController;
 use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\ListController;
 use TopConcepts\Payolution\Module\Controller\Admin\ApiLog\MainController;
 use TopConcepts\Payolution\Module\Controller\Admin\ConfigController;
-use TopConcepts\Payolution\Module\Controller\Admin\ExpertController;
 use TopConcepts\Payolution\Module\Controller\Admin\InstallController;
 use TopConcepts\Payolution\Module\Controller\Admin\JsLibraryController;
 use TopConcepts\Payolution\Module\Controller\Admin\Order\OrderAddressController;
@@ -72,7 +71,6 @@ $aModule = [
         'PayolutionPdfDownload' => PdfDownloadController::class,
         // admin controllers
         'payolution_regional' => RegionalController::class,
-        'payolution_expert' => ExpertController::class,
         'payolution_config' => ConfigController::class,
         'payolution_orders' => OrdersController::class,
         'payolution_apilog' => MainController::class,
@@ -101,7 +99,6 @@ $aModule = [
     'templates' => [
         // backend tpl
         'payolution_regional_settings.tpl' => 'tc/payolution/views/admin/tpl/payolution_regional_settings.tpl',
-        'payolution_expert.tpl' => 'tc/payolution/views/admin/tpl/payolution_expert.tpl',
         'payolution_config.tpl' => 'tc/payolution/views/admin/tpl/payolution_config.tpl',
         'payolution_orders.tpl' => 'tc/payolution/views/admin/tpl/payolution_orders.tpl',
         'payolution_apilog.tpl' => 'tc/payolution/views/admin/tpl/payolution_apilog.tpl',

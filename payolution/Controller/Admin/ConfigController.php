@@ -90,10 +90,12 @@ class ConfigController extends ShopConfiguration
     public function render()
     {
         $db = Db::getDb(Db::FETCH_MODE_ASSOC);
-        $sql = 'SELECT oxid FROM oxconfig WHERE oxvarname = \'aPayolutionLanguage\' AND oxshopid = ?';
-        $isPayolutionLanguage = $db->getOne($sql, [Registry::getConfig()->getShopId()]);
+        $schema = Registry::getConfig()->getConfigParam('dbName');
+        $sql = 'SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = "'.$schema.'" AND  TABLE_NAME = "payo_history"';
 
-        if (!$isPayolutionLanguage) {
+        $exists = $db->getOne($sql);
+
+        if (!$exists) {
             Registry::get(UtilsView::class)->addErrorToDisplay(
                 Registry::getLang()->translateString('PAYOLUTION_INSTALL_NOT_INSTALLED')
             );
