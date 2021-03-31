@@ -271,15 +271,6 @@ class InstallController extends ToolsList
             return false;
         }
 
-        // check for configuration settings in current shop
-        if (!$db->getOne(
-            "SELECT oxid FROM oxconfig WHERE oxvarname = 'aPayolutionLanguage' AND oxshopid = ?",
-            [Registry::getConfig()->getShopId()]
-        ))
-        {
-            return false;
-        }
-
         return true;
     }
 
