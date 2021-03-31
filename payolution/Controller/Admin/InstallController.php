@@ -23,6 +23,7 @@ use OxidEsales\Eshop\Application\Model\Payment;
 use OxidEsales\Eshop\Core\Exception\StandardException;
 use OxidEsales\Eshop\Core\Field;
 use OxidEsales\Eshop\Core\Registry;
+use OxidEsales\Eshop\Core\UtilsObject;
 use OxidEsales\Eshop\Core\UtilsView;
 use OxidEsales\Facts\Config\ConfigFile;
 use OxidEsales\Facts\Facts;
@@ -95,27 +96,27 @@ class InstallController extends ToolsList
     private function setPaymentOptions()
     {
         $this->paymentOptions = implode('__@@', [
-          'payolution_installment_birthday',
-          'payolution_installment_privacy',
-          'payolution_installment_iban',
-          'payolution_installment_account_holder',
-          'payolution_installment_period',
-          'payolution_b2c_privacy',
-          'payolution_b2c_birthday',
-          'payolution_b2c_phone',
-          'payolution_b2b_ust_id',
-          'payolution_b2b_privacy',
-          'payolution_b2b_type',
-          'payolution_b2b_owner_given',
-          'payolution_b2b_owner_family',
-          'payolution_b2b_owner_birthday',
-          'payolution_b2b_phone',
-          'payolution_dd_birthday',
-          'payolution_dd_privacy',
-          'payolution_dd_holder',
-          'payolution_dd_iban',
-          'payolution_dd_mandate',
-        ]).'__@@';
+                'payolution_installment_birthday',
+                'payolution_installment_privacy',
+                'payolution_installment_iban',
+                'payolution_installment_account_holder',
+                'payolution_installment_period',
+                'payolution_b2c_privacy',
+                'payolution_b2c_birthday',
+                'payolution_b2c_phone',
+                'payolution_b2b_ust_id',
+                'payolution_b2b_privacy',
+                'payolution_b2b_type',
+                'payolution_b2b_owner_given',
+                'payolution_b2b_owner_family',
+                'payolution_b2b_owner_birthday',
+                'payolution_b2b_phone',
+                'payolution_dd_birthday',
+                'payolution_dd_privacy',
+                'payolution_dd_holder',
+                'payolution_dd_iban',
+                'payolution_dd_mandate',
+            ]).'__@@';
     }
 
     /**
@@ -136,6 +137,30 @@ class InstallController extends ToolsList
                 Registry::getLang()->translateString('PAYOLUTION_SUCCESS_MODULE_INSTALLED')
             );
         } else {
+            $config = Registry::getConfig();
+            $oxid = UtilsObject::getInstance()->generateUID();
+            $db = Db::getDb();
+            $oxid = $db->quote($oxid);
+            $sql = 'select oxtitle from oxcontents where oxloadid = ? and oxshopid = ?';
+            $content = $db->getOne($sql, ['payolutionPdfEmailHtml', $config->getActiveShop()->getId()]);
+
+            if(empty($content)) {
+                $sql = '
+                INSERT INTO `oxcontents` (`OXID`, `OXLOADID`, `OXSHOPID`, `OXSNIPPET`, `OXTYPE`, `OXACTIVE`, `OXACTIVE_1`, `OXPOSITION`, `OXTITLE`, `OXCONTENT`, `OXTITLE_1`, `OXCONTENT_1`, `OXACTIVE_2`, `OXTITLE_2`, `OXCONTENT_2`, `OXACTIVE_3`, `OXTITLE_3`, `OXCONTENT_3`, `OXCATID`, `OXFOLDER`, `OXTERMVERSION`) VALUES('.$oxid.',\'payolutionPdfEmailHtml\','.$config->getActiveShop()->getId().',\'1\',\'0\',\'1\',\'1\',\'\',\'Bestellung [#oxordernr] im Onlineshop [#sShopUrl] - [#oxorderdate-date] [#oxorderdate-time]\',\'[{oxmultilang ident=\"PAYOLUTION_GENERAL_EMAIL\"}]: [{$order->oxorder__oxbillemail->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_BILLADDRESS\"}]<br><br>[{if $order->oxorder__oxbillcompany->value }][{oxmultilang ident=\"GENERAL_COMPANY\"}] [{$order->oxorder__oxbillcompany->value }]<br>[{/if}][{if $order->oxorder__oxbilladdinfo->value }][{$order->oxorder__oxbilladdinfo->value }]<br>[{/if}][{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value }] [{$order->oxorder__oxbilllname->value }]<br>[{$order->oxorder__oxbillstreet->value }] [{$order->oxorder__oxbillstreetnr->value }]<br>[{$order->oxorder__oxbillstateid->value}]<br>[{$order->oxorder__oxbillzip->value }] [{$order->oxorder__oxbillcity->value }]<br>[{$order->oxorder__oxbillcountry->value }]<br>[{if $order->oxorder__oxbillcompany->value && $order->oxorder__oxbillustid->value }]    [{oxmultilang ident=\"PAYOLUTION_ORDER_OVERVIEW_VATID\" }] [{$order->oxorder__oxbillustid->value}]<br>[{/if}]<br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_DELIVERYADDRESS\" }]:<br><br>[{if $order->oxorder__oxdelcompany->value}]Firma [{$order->oxorder__oxdelcompany->value}]<br>[{/if}][{if $order->oxorder__oxdeladdinfo->value}][{$order->oxorder__oxdeladdinfo->value }]<br>[{/if}][{$order->oxorder__oxdelsal->value|oxmultilangsal }] [{$order->oxorder__oxdelfname->value }] [{$order->oxorder__oxdellname->value}]<br>[{$order->oxorder__oxdelstreet->value}] [{$order->oxorder__oxdelstreetnr->value}]<br>[{$order->oxorder__oxdelstateid->value}]<br>[{$order->oxorder__oxdelzip->value}] [{$order->oxorder__oxdelcity->value}]<br>[{$order->oxorder__oxdelcountry->value}]<br><br><br>[{oxmultilang ident=\"PAYOLUTION_TOTAL_SUM\" }] [{$order->oxorder__oxtotalordersum->value}] [{$order->oxorder__oxcurrency->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_REFERENCE_ID\" }]: [{$order->oxorder__payo_reference_id->value}]\',\'\',\'[{oxmultilang ident=\"PAYOLUTION_GENERAL_EMAIL\"}]: [{$order->oxorder__oxbillemail->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_BILLADDRESS\"}]<br><br>[{if $order->oxorder__oxbillcompany->value }][{oxmultilang ident=\"GENERAL_COMPANY\"}] [{$order->oxorder__oxbillcompany->value }]<br>[{/if}][{if $order->oxorder__oxbilladdinfo->value }][{$order->oxorder__oxbilladdinfo->value }]<br>[{/if}][{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value }] [{$order->oxorder__oxbilllname->value }]<br>[{$order->oxorder__oxbillstreet->value }] [{$order->oxorder__oxbillstreetnr->value }]<br>[{$order->oxorder__oxbillstateid->value}]<br>[{$order->oxorder__oxbillzip->value }] [{$order->oxorder__oxbillcity->value }]<br>[{$order->oxorder__oxbillcountry->value }]<br>[{if $order->oxorder__oxbillcompany->value && $order->oxorder__oxbillustid->value }]    [{oxmultilang ident=\"PAYOLUTION_ORDER_OVERVIEW_VATID\" }] [{$order->oxorder__oxbillustid->value}]<br>[{/if}]<br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_DELIVERYADDRESS\" }]:<br><br>[{if $order->oxorder__oxdelcompany->value}]Firma [{$order->oxorder__oxdelcompany->value}]<br>[{/if}][{if $order->oxorder__oxdeladdinfo->value}][{$order->oxorder__oxdeladdinfo->value }]<br>[{/if}][{$order->oxorder__oxdelsal->value|oxmultilangsal }] [{$order->oxorder__oxdelfname->value }] [{$order->oxorder__oxdellname->value}]<br>[{$order->oxorder__oxdelstreet->value}] [{$order->oxorder__oxdelstreetnr->value}]<br>[{$order->oxorder__oxdelstateid->value}]<br>[{$order->oxorder__oxdelzip->value}] [{$order->oxorder__oxdelcity->value}]<br>[{$order->oxorder__oxdelcountry->value}]<br><br><br>[{oxmultilang ident=\"PAYOLUTION_TOTAL_SUM\" }] [{$order->oxorder__oxtotalordersum->value}] [{$order->oxorder__oxcurrency->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_REFERENCE_ID\" }]: [{$order->oxorder__payo_reference_id->value}]\',\'1\',\'\',\'[{oxmultilang ident=\"PAYOLUTION_GENERAL_EMAIL\"}]: [{$order->oxorder__oxbillemail->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_BILLADDRESS\"}]<br><br>[{if $order->oxorder__oxbillcompany->value }][{oxmultilang ident=\"GENERAL_COMPANY\"}] [{$order->oxorder__oxbillcompany->value }]<br>[{/if}][{if $order->oxorder__oxbilladdinfo->value }][{$order->oxorder__oxbilladdinfo->value }]<br>[{/if}][{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value }] [{$order->oxorder__oxbilllname->value }]<br>[{$order->oxorder__oxbillstreet->value }] [{$order->oxorder__oxbillstreetnr->value }]<br>[{$order->oxorder__oxbillstateid->value}]<br>[{$order->oxorder__oxbillzip->value }] [{$order->oxorder__oxbillcity->value }]<br>[{$order->oxorder__oxbillcountry->value }]<br>[{if $order->oxorder__oxbillcompany->value && $order->oxorder__oxbillustid->value }]    [{oxmultilang ident=\"PAYOLUTION_ORDER_OVERVIEW_VATID\" }] [{$order->oxorder__oxbillustid->value}]<br>[{/if}]<br>[{oxmultilang ident=\"PAYOLUTION_GENERAL_DELIVERYADDRESS\" }]:<br><br>[{if $order->oxorder__oxdelcompany->value}]Firma [{$order->oxorder__oxdelcompany->value}]<br>[{/if}][{if $order->oxorder__oxdeladdinfo->value}][{$order->oxorder__oxdeladdinfo->value }]<br>[{/if}][{$order->oxorder__oxdelsal->value|oxmultilangsal }] [{$order->oxorder__oxdelfname->value }] [{$order->oxorder__oxdellname->value}]<br>[{$order->oxorder__oxdelstreet->value}] [{$order->oxorder__oxdelstreetnr->value}]<br>[{$order->oxorder__oxdelstateid->value}]<br>[{$order->oxorder__oxdelzip->value}] [{$order->oxorder__oxdelcity->value}]<br>[{$order->oxorder__oxdelcountry->value}]<br><br><br>[{oxmultilang ident=\"PAYOLUTION_TOTAL_SUM\" }] [{$order->oxorder__oxtotalordersum->value}] [{$order->oxorder__oxcurrency->value}]<br><br>[{oxmultilang ident=\"PAYOLUTION_REFERENCE_ID\" }]: [{$order->oxorder__payo_reference_id->value}]\',\'1\',\'\',\'\',\'30e44ab83fdee7564.23264141\',\'\',\'\');
+                ';
+                $db->execute($sql);
+            }
+
+            $sql = 'select oxtitle from oxcontents where oxloadid = ? and oxshopid = ?';
+            $content = $db->getOne($sql, ['payolutionPdfEmailPlain', $config->getActiveShop()->getId()]);
+
+            if(empty($content)) {
+                $sql = '
+                INSERT INTO `oxcontents` (`OXID`, `OXLOADID`, `OXSHOPID`, `OXSNIPPET`, `OXTYPE`, `OXACTIVE`, `OXACTIVE_1`, `OXPOSITION`, `OXTITLE`, `OXCONTENT`, `OXTITLE_1`, `OXCONTENT_1`, `OXACTIVE_2`, `OXTITLE_2`, `OXCONTENT_2`, `OXACTIVE_3`, `OXTITLE_3`, `OXCONTENT_3`, `OXCATID`, `OXFOLDER`, `OXTERMVERSION`) VALUES('.$oxid.',\'payolutionPdfEmailPlain\','.$config->getActiveShop()->getId().',\'1\',\'0\',\'1\',\'1\',\'\',\'Bestellung [#oxordernr] im Onlineshop [#sShopUrl] - [#oxorderdate-date] [#oxorderdate-time]\',\'[{oxmultilang ident=\"PAYOLUTION_GENERAL_EMAIL\"}]: [{$order->oxorder__oxbillemail->value}][{oxmultilang ident=\"PAYOLUTION_GENERAL_BILLADDRESS\"}][{if $order->oxorder__oxbillcompany->value }][{oxmultilang ident=\"GENERAL_COMPANY\"}] [{$order->oxorder__oxbillcompany->value }][{/if}][{if $order->oxorder__oxbilladdinfo->value }][{$order->oxorder__oxbilladdinfo->value }][{/if}][{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value }] [{$order->oxorder__oxbilllname->value }][{$order->oxorder__oxbillstreet->value }] [{$order->oxorder__oxbillstreetnr->value }][{$order->oxorder__oxbillstateid->value}][{$order->oxorder__oxbillzip->value }] [{$order->oxorder__oxbillcity->value }][{$order->oxorder__oxbillcountry->value }][{if $order->oxorder__oxbillcompany->value && $order->oxorder__oxbillustid->value }]    [{oxmultilang ident=\"PAYOLUTION_ORDER_OVERVIEW_VATID\" }] [{$order->oxorder__oxbillustid->value}][{/if}][{oxmultilang ident=\"PAYOLUTION_GENERAL_DELIVERYADDRESS\" }]:[{if $order->oxorder__oxdelcompany->value}]Firma [{$order->oxorder__oxdelcompany->value}][{/if}][{if $order->oxorder__oxdeladdinfo->value}][{$order->oxorder__oxdeladdinfo->value }][{/if}][{$order->oxorder__oxdelsal->value|oxmultilangsal }] [{$order->oxorder__oxdelfname->value }] [{$order->oxorder__oxdellname->value}][{$order->oxorder__oxdelstreet->value}] [{$order->oxorder__oxdelstreetnr->value}][{$order->oxorder__oxdelstateid->value}][{$order->oxorder__oxdelzip->value}] [{$order->oxorder__oxdelcity->value}][{$order->oxorder__oxdelcountry->value}][{oxmultilang ident=\"PAYOLUTION_TOTAL_SUM\" }] [{$order->oxorder__oxtotalordersum->value}] [{$order->oxorder__oxcurrency->value}] [{oxmultilang ident=\"PAYOLUTION_REFERENCE_ID\" }]: [{$order->oxorder__payo_reference_id->value}]\',\'Bestellung [#oxordernr] im Onlineshop [#sShopUrl] - [#oxorderdate-date] [#oxorderdate-time]\',\'[{oxmultilang ident=\"PAYOLUTION_GENERAL_EMAIL\"}]: [{$order->oxorder__oxbillemail->value}][{oxmultilang ident=\"PAYOLUTION_GENERAL_BILLADDRESS\"}][{if $order->oxorder__oxbillcompany->value }][{oxmultilang ident=\"GENERAL_COMPANY\"}] [{$order->oxorder__oxbillcompany->value }][{/if}][{if $order->oxorder__oxbilladdinfo->value }][{$order->oxorder__oxbilladdinfo->value }][{/if}][{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value }] [{$order->oxorder__oxbilllname->value }][{$order->oxorder__oxbillstreet->value }] [{$order->oxorder__oxbillstreetnr->value }][{$order->oxorder__oxbillstateid->value}][{$order->oxorder__oxbillzip->value }] [{$order->oxorder__oxbillcity->value }][{$order->oxorder__oxbillcountry->value }][{if $order->oxorder__oxbillcompany->value && $order->oxorder__oxbillustid->value }]    [{oxmultilang ident=\"PAYOLUTION_ORDER_OVERVIEW_VATID\" }] [{$order->oxorder__oxbillustid->value}][{/if}][{oxmultilang ident=\"PAYOLUTION_GENERAL_DELIVERYADDRESS\" }]:[{if $order->oxorder__oxdelcompany->value}]Firma [{$order->oxorder__oxdelcompany->value}][{/if}][{if $order->oxorder__oxdeladdinfo->value}][{$order->oxorder__oxdeladdinfo->value }][{/if}][{$order->oxorder__oxdelsal->value|oxmultilangsal }] [{$order->oxorder__oxdelfname->value }] [{$order->oxorder__oxdellname->value}][{$order->oxorder__oxdelstreet->value}] [{$order->oxorder__oxdelstreetnr->value}][{$order->oxorder__oxdelstateid->value}][{$order->oxorder__oxdelzip->value}] [{$order->oxorder__oxdelcity->value}][{$order->oxorder__oxdelcountry->value}][{oxmultilang ident=\"PAYOLUTION_TOTAL_SUM\" }] [{$order->oxorder__oxtotalordersum->value}] [{$order->oxorder__oxcurrency->value}] [{oxmultilang ident=\"PAYOLUTION_REFERENCE_ID\" }]: [{$order->oxorder__payo_reference_id->value}]\',\'0\',\'\',\'\',\'0\',\'\',\'\',\'30e44ab83fdee7564.23264141\',\'\',\'\');
+                ';
+                $db->execute($sql);
+            }
+
             $this->setTemplateParam('bModuleInstalled', true);
 
             /* @var $module PayolutionModule */

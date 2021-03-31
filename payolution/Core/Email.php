@@ -20,8 +20,10 @@ use OxidEsales\Eshop\Application\Model\Content;
 use OxidEsales\Eshop\Application\Model\Order;
 use OxidEsales\Eshop\Core\Email as OxidEmail;
 use OxidEsales\Eshop\Core\Registry;
+use oxtableviewnamegenerator;
 use TopConcepts\Payolution\AccessPoint;
 use TopConcepts\Payolution\PayolutionModule;
+use OxidEsales\Eshop\Core\DatabaseProvider as Db;
 
 /**
  * Class Email
@@ -70,10 +72,11 @@ class Email extends Email_Parent
         $oSmarty = $this->_getSmarty();
         $this->setViewData("order", $order);
 
-        /** @var Content $oContent */
-        $oContentPdfEmailHtml = oxNew(Content::class);
-        $oContentPdfEmailHtml->loadByIdent('payolutionPdfEmailHtml');
-        $sSubject = $oContentPdfEmailHtml->oxcontents__oxtitle->value;
+        $db = Db::getDb();
+        $tableViewNameGenerator = oxNew('oxTableViewNameGenerator');
+        $sViewName = $tableViewNameGenerator->getViewName('oxcontents');
+        $sql = 'select oxtitle from '.$sViewName.' where oxloadid = ? and oxshopid = ?';
+        $sSubject = $db->getOne($sql, ['payolutionPdfEmailHtml', $config->getActiveShop()->getId()]);
 
         $sSubject = str_replace('[#oxordernr]', $order->oxorder__oxordernr->value, $sSubject);
         $sSubject = str_replace('[#sShopUrl]', $config->getShopUrl(), $sSubject);
