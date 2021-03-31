@@ -10,7 +10,7 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "tc"
+      "target-directory": "tc/payolution"
     }
   },
   "autoload": {
