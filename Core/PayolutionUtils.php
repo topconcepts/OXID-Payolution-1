@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace TopConcepts\Payolution\Core;
+namespace TopConcepts\Payolution\Module\Core;
 
 
 use oxexception;
