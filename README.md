@@ -17,7 +17,7 @@ Payolution
 
 -- Version
 
-1.5.1
+1.5.2
 
 
 -- Link
@@ -42,9 +42,9 @@ Payolution Module for OXID version >= 6.0.1
 
 Can be found in the folder /manual or can be downloaded here:
 
-German: https://www.cgrd.de/customer/payolution/payolution-for-oxid-de-1.5.1.pdf
+German: https://www.cgrd.de/customer/payolution/payolution-for-oxid-de-1.5.2.pdf
 
-English: https://www.cgrd.de/customer/payolution/payolution-for-oxid-en-1.5.1.pdf
+English: https://www.cgrd.de/customer/payolution/payolution-for-oxid-en-1.5.2.pdf
 
 
 -- Installation
@@ -56,7 +56,7 @@ The installation for OXID6 is done using composer.
 Please add the following line to the central composer.json file of your project within the section „require“:
 
 
-"topconcepts/oxid-payolution-6": "v1.5.1"
+"topconcepts/oxid-payolution-6": "v1.5.2"
 
 2. Run composer update
 
