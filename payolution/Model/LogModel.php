@@ -131,4 +131,23 @@ class LogModel extends BaseModel
     {
         $this->payo_logs__order_no = new Field($value, Field::T_RAW);
     }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setOxShopId($value)
+    {
+        $this->payo_logs__oxshopid = new Field($value, Field::T_RAW);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOxShopId()
+    {
+        return (string)$this->payo_logs__oxshopid->value;
+    }
 }

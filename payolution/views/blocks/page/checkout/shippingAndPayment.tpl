@@ -12,6 +12,7 @@
     [{oxscript add="var installmentSliderRateTranslation = '"|cat:$installmentSliderRateTranslation|cat:"';"}]
     [{oxstyle include=$oViewConf->getModuleUrl("payolution", "out/src/css/payolution.css") priority=10}]
     [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution.jquery.min.js") priority=1}]
+    [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution.jquery-ui.min.js") priority=2}]
     [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/accounting.js") priority=10}]
     [{assign var='payoInstallmentJsUrl' value=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/payolution/payo-installment.js")|cat:'?'|cat:$oViewConf->getPayoJsUpdateTime()}]
     [{oxscript include=$payoInstallmentJsUrl priority=10}]
@@ -19,6 +20,17 @@
     [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/libs/cookie/jquery.cookie.js") priority=9}]
     [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/payoInstallmentSlider.js") priority=10}]
     [{oxscript include=$oViewConf->getModuleUrl("payolution", "out/src/js/payo-order-step.js") priority=10}]
+    [{oxscript include=$oViewConf->getPayolutionModuleUrl("out/src/js/payoPaymentInstallment.js") priority=13}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution.css") priority=10}]
+    [{if $oViewConf->isActiveThemeFlow()}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-flow.css") priority=10}]
+    [{/if}]
+    [{if $oViewConf->isActiveThemeWave()}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/payolution-wave.css") priority=10}]
+    [{/if}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui.min.css") priority=11}]
+    [{oxstyle  include=$oViewConf->getPayolutionModuleUrl("out/src/css/jquery-ui-slider-pips.css") priority=11}]
+    <input type="hidden" id="payo-translation-due" value="[{oxmultilang ident='PAYOLUTION_DUE'}]"/>
     <a href="javascript:void(0)" id="payo-toggler-show" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_SHOW_DETAILS}]</a>
     <a href="javascript:void(0)" id="payo-toggler-hide" class="readMore payo-order-installment-details-toggler">[{oxmultilang ident=PAYO_PAYMENT_INSTALLMENT_HIDE_DETAILS}]</a>
     <div id="payo-order-installment-details">
@@ -60,4 +72,4 @@
         </div>
         <div style="clear:both"></div>
     </div>
-[{/if}]
+    [{/if}]

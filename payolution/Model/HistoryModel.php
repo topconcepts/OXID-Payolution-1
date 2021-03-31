@@ -146,4 +146,23 @@ class HistoryModel extends BaseModel
     {
         return (string)$this->payo_history__added_by->value;
     }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setOxShopId($value)
+    {
+        $this->payo_history__oxshopid = new Field($value, Field::T_RAW);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOxShopId()
+    {
+        return (string)$this->payo_history__oxshopid->value;
+    }
 }

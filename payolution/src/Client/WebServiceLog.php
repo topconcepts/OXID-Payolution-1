@@ -66,11 +66,12 @@ class WebServiceLog extends WebService
         $log->setRequest($this->prettyXml($requestXml));
         $log->setResponse($response);
         $log->setAddedAt(date('Y-m-d H:i:s', Registry::get(UtilsDate::class)->getTime()));
+        $log->setOxShopId(Registry::getConfig()->getActiveShop()->getId());
         if ($this->orderingLogger->_getOrderInProgress()) {
             $log->setOrderId($this->orderingLogger->_getOrderInProgress()
-              ->getId());
+                ->getId());
             $log->setOrderNo($this->orderingLogger->_getOrderInProgress()
-              ->invoiceNo());
+                ->invoiceNo());
         }
         $log->save();
 
