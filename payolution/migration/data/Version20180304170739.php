@@ -29,7 +29,6 @@ class Version20180304170739 extends AbstractMigration
      */
     public function up(Schema $schema)
     {
-        //THIS GOT CHANGED AND MIGRATIONS.YML
         $this->addSql("
             CREATE TABLE IF NOT EXISTS `payo_logs` (
               `OXID`     char(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
