@@ -31,7 +31,7 @@
               </div>
           </div>
 
-          <input type="button" name="save" value="[{oxmultilang ident="PAYOLUTION_JSLIB_UPDATE"}]" class="payolution-blue-button corners mgt20" onClick="location.href='?stoken=[{php}]echo $_GET['stoken'][{/php}]&cl=payolution_jslibrary&fnc=update'" [{$readonly}]>
+          <input type="button" name="save" value="[{oxmultilang ident="PAYOLUTION_JSLIB_UPDATE"}]" class="payolution-blue-button corners mgt20" onClick="location.href='[{$oViewConf->getSelfLink()}]cl=payolution_jslibrary&fnc=update'" [{$readonly}]>
       </div>
   </form>
 </body>
