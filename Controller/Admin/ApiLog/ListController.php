@@ -17,6 +17,7 @@
 namespace TopConcepts\Payolution\Module\Controller\Admin\ApiLog;
 
 use OxidEsales\Eshop\Application\Controller\Admin\AdminListController;
+use OxidEsales\Eshop\Core\Registry;
 use TopConcepts\Payolution\Module\Model\LogListModel;
 use TopConcepts\Payolution\Module\Model\LogModel;
 
@@ -53,4 +54,16 @@ class ListController extends AdminListController
      * @var string
      */
     protected $_sDefSortField = "added_at";
+
+    /**
+     * @param $conditionList
+     * @param $queryString
+     * @return mixed
+     */
+    public function _prepareWhereQuery($conditionList, $queryString) {
+        $ret = parent::_prepareWhereQuery($conditionList, $queryString);
+        $ret .= ' and payo_logs.oxshopid = '. Registry::getConfig()->getActiveShop()->getId();
+
+        return $ret;
+    }
 }
